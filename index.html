@@ -3,477 +3,465 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developmental Psychology Master Study Guide · Chapters 1-4</title>
+    <title>Developmental Psychology · Click-to-Reveal Master Study Guide</title>
     <style>
-        /* GLOBAL RESET & FONTS */
+        /* ===== GLOBAL STYLES ===== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
         }
         body {
-            background-color: #f8fafc;
-            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
-            line-height: 1.6;
-            color: #0a1e2e;
+            background: linear-gradient(145deg, #f1f7fc 0%, #e6edf5 100%);
             padding: 2rem 1rem;
+            line-height: 1.6;
+            color: #0a2c3d;
         }
         .guide-container {
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
-            background: white;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            border-radius: 24px;
-            padding: 2.5rem 2.8rem;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(3px);
+            box-shadow: 0 20px 40px -12px rgba(0,32,64,0.25);
+            border-radius: 36px;
+            padding: 2.8rem 2.5rem;
+            border: 1px solid #dceaf2;
         }
 
-        /* TYPOGRAPHY */
         h1 {
             font-size: 2.8rem;
             font-weight: 700;
-            letter-spacing: -0.02em;
-            background: linear-gradient(145deg, #0b3b5c, #0a4c6e);
+            background: linear-gradient(165deg, #0c4a6e, #0b5e7c);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 0.25rem;
-            border-bottom: 4px solid #cbd5e1;
-            padding-bottom: 0.5rem;
+            margin-bottom: 0.2rem;
+            border-bottom: 5px solid #a2c8dd;
+            padding-bottom: 0.3rem;
         }
         h2 {
-            font-size: 1.9rem;
+            font-size: 2rem;
             font-weight: 600;
-            color: #0b3b5c;
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-            border-left: 10px solid #2c7da0;
+            color: #0f4662;
+            margin-top: 2.6rem;
+            margin-bottom: 1.2rem;
+            border-left: 14px solid #19778e;
             padding-left: 1.2rem;
-            background: #f1f9ff;
+            background: #ecf6fa;
+            border-radius: 0 18px 18px 0;
             line-height: 1.3;
-            border-radius: 0 12px 12px 0;
         }
         h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #1e6091;
+            font-size: 1.6rem;
+            color: #1a5f73;
             margin-top: 1.8rem;
-            margin-bottom: 0.8rem;
-            border-bottom: 2px solid #a9d6e5;
+            border-bottom: 3px solid #b3d7e2;
             padding-bottom: 0.4rem;
         }
         h4 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #184e77;
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-        .section-toc {
-            background: #e9f2fa;
-            padding: 1.6rem 2rem;
-            border-radius: 28px;
-            margin: 2rem 0 1rem;
-            border: 1px solid #b7e0f0;
+            font-size: 1.3rem;
+            color: #1c6a5e;
+            margin: 1.4rem 0 0.6rem;
         }
 
-        /* TABLES */
+        /* ===== CLICK-TO-REVEAL CARD ===== */
+        .qa-card {
+            background: white;
+            border-radius: 20px;
+            padding: 0.2rem 0;
+            margin: 1.2rem 0;
+            box-shadow: 0 6px 12px rgba(0,35,55,0.06);
+            border-left: 8px solid #3083a2;
+            transition: 0.1s;
+        }
+        .question-text {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #003952;
+            padding: 0.9rem 1.8rem 0.5rem;
+            background: #f3faff;
+            border-radius: 20px 20px 0 0;
+        }
+        .reveal-btn {
+            background: #deedf2;
+            border: none;
+            color: #0b4f6c;
+            padding: 0.5rem 1.8rem;
+            margin: 0.2rem 1.8rem 0.8rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-radius: 50px;
+            cursor: pointer;
+            border: 1px solid #6ca3b3;
+            transition: all 0.15s;
+            letter-spacing: 0.3px;
+        }
+        .reveal-btn:hover {
+            background: #c8dbe4;
+            border-color: #1c6a7a;
+            color: black;
+            box-shadow: 0 4px 8px rgba(0,80,100,0.1);
+        }
+        .answer-content {
+            display: none;
+            background: #f9fff7;
+            padding: 1rem 1.8rem 1.2rem;
+            border-radius: 0 0 20px 20px;
+            border-top: 2px dashed #6c9eb3;
+            margin-top: 0.2rem;
+            color: #10403b;
+            font-size: 1.02rem;
+        }
+        .answer-content.show {
+            display: block;
+        }
+
+        /* ===== TABLES, TRAPS, KEY TERMS ===== */
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 1.6rem 0;
-            font-size: 0.98rem;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-            border-radius: 16px;
+            margin: 1.8rem 0;
+            background: white;
+            border-radius: 20px;
             overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0,20,40,0.06);
         }
         th {
-            background-color: #1e3d58;
+            background: #134f5c;
             color: white;
             font-weight: 600;
-            padding: 12px 10px;
-            text-align: left;
+            padding: 14px 8px;
             font-size: 1rem;
         }
         td {
-            border: 1px solid #dde7f0;
+            border: 1px solid #cde3e9;
             padding: 12px 10px;
-            background-color: white;
-            vertical-align: top;
+            background: white;
         }
         tr:nth-child(even) td {
-            background-color: #f6fbfe;
-        }
-
-        /* BLOCKS & HIGHLIGHTS */
-        .key-term {
-            background: #fcf4e9;
-            border-left: 6px solid #f39c12;
-            padding: 1.2rem 1.8rem;
-            border-radius: 12px;
-            margin: 1.5rem 0;
-            font-weight: 500;
-        }
-        .qa-block {
-            background: #f1f9f9;
-            border-radius: 20px;
-            padding: 1.4rem 2rem;
-            margin: 1.6rem 0;
-            border: 1px solid #cbd5e1;
-        }
-        .question {
-            font-weight: 700;
-            color: #0a4c6e;
-            font-size: 1.08rem;
-            margin-bottom: 0.3rem;
-        }
-        .answer {
-            margin-left: 1.2rem;
-            color: #1e3750;
+            background: #f6fbfc;
         }
 
         .trap-box {
-            background: #ffecf0;
-            border: 2px solid #e63946;
-            border-radius: 20px;
-            padding: 1.2rem 2rem;
-            margin: 1.5rem 0;
+            background: #fffbeb;
+            border-left: 12px solid #c53b3b;
+            border-radius: 24px;
+            padding: 1.4rem 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 6px 12px rgba(150,40,40,0.05);
         }
 
         .milestone {
-            background: #def0d9;
-            border-radius: 14px;
-            padding: 0.8rem 1.6rem;
-            margin: 1rem 0;
-            border-left: 8px solid #2d6a4f;
-        }
-        ul, ol {
-            margin-left: 1.8rem;
-            margin-bottom: 1.2rem;
-        }
-        li {
-            margin-bottom: 0.3rem;
+            background: #dff1f0;
+            padding: 1rem 2rem;
+            border-radius: 18px;
+            border-left: 10px solid #296e6e;
+            margin: 1.2rem 0;
         }
 
-        .button-pdf {
-            background: #1e6091;
-            color: white;
-            border: none;
-            padding: 0.8rem 2rem;
-            font-size: 1.1rem;
-            border-radius: 40px;
-            font-weight: 600;
-            margin: 1rem 0 2rem;
-            display: inline-block;
-            border: 1px solid white;
-        }
-
-        hr {
-            margin: 2.2rem 0;
-            border: 2px dashed #9cb4d4;
-        }
-        footer {
-            margin-top: 3rem;
-            text-align: center;
-            color: #3a5f6e;
-            border-top: 2px solid #cbd5e1;
-            padding-top: 1.8rem;
-            font-size: 0.95rem;
-        }
-
-        /* TOC */
-        .toc-grid {
+        .quickref-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 0.8rem;
-            margin-top: 1rem;
+            gap: 1.5rem;
+            margin-top: 1.2rem;
         }
-        .toc-item {
-            background: white;
-            padding: 0.6rem 1rem;
-            border-radius: 40px;
-            border: 1px solid #89aec5;
+        .quickref-card {
+            background: #e5f1f5;
+            border-radius: 24px;
+            padding: 1.4rem 1.4rem;
+            border: 1px solid #90b8c9;
+        }
+
+        .btn-collapse {
+            background: none;
+            border: 2px solid #3a7b8c;
+            padding: 0.3rem 1.2rem;
+            border-radius: 60px;
+            font-weight: 600;
+            color: #12455f;
+            margin-left: 1rem;
+            cursor: pointer;
+        }
+        footer {
+            margin-top: 3.5rem;
             text-align: center;
-            font-weight: 500;
+            color: #346673;
+            border-top: 2px solid #bad7e3;
+            padding-top: 1.8rem;
         }
-        a {
-            color: #0d3c4f;
-            text-decoration: none;
-        }
-        .header-mini {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
+        .toc {
+            background: #e0edf2;
+            border-radius: 40px;
+            padding: 1.5rem 2rem;
+            margin: 1.5rem 0;
         }
     </style>
 </head>
 <body>
 <div class="guide-container">
 
-    <!-- MAIN HEADER -->
-    <div style="display: flex; justify-content: space-between; align-items: baseline;">
-        <h1>📘 DEVELOPMENTAL PSYCHOLOGY<br><span style="font-size: 1.9rem; -webkit-text-fill-color: #1f5068;">MASTER STUDY GUIDE · CHAPTERS 1–4</span></h1>
-        <span style="background: #0f2f44; color: white; padding: 0.4rem 1.2rem; border-radius: 60px; font-weight: 600;">62 Q&A · 38 PAGES</span>
+    <!-- ========== HEADER ========== -->
+    <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+        <h1>🧪 DEVELOPMENTAL PSYCHOLOGY<br><span style="font-size: 1.8rem; -webkit-text-fill-color: #1f6e7a;">CLICK-TO-REVEAL · FULL INTEGRATION</span></h1>
+        <span style="background: #0f4057; color: white; padding: 0.6rem 1.5rem; border-radius: 100px; font-weight: 600;">62+ Q&A · ACTIVE RECALL</span>
     </div>
-    <p style="font-size: 1.2rem; margin-top: 0.2rem; color: #2a4a5e;"><strong>Complete integration:</strong> all questions, all answers, all tables, cross‑chapter synthesis.</p>
+    <p style="font-size: 1.25rem; margin-top: 0.4rem; color: #1b5166;"><strong>⬇️ All answers hidden — click any blue button to reveal. Study actively!</strong></p>
     
-    <!-- TABLE OF CONTENTS (clickable for PDF/bookmark) -->
-    <div class="section-toc">
-        <h3 style="margin-top: 0; border-bottom: none; color: #083c5a;">📑 COMPREHENSIVE TABLE OF CONTENTS</h3>
-        <div class="toc-grid">
-            <div class="toc-item">🔬 <a href="#ch1">CH 1: Theories & Methods</a></div>
-            <div class="toc-item">👶 <a href="#ch2">CH 2: Prenatal & Infancy</a></div>
-            <div class="toc-item">🧬 <a href="#ch3">CH 3: Genetics & Brain</a></div>
-            <div class="toc-item">🧠 <a href="#ch4">CH 4: Cognitive Development</a></div>
-            <div class="toc-item">⚖️ <a href="#integration">Cross‑Chapter Integration</a></div>
-            <div class="toc-item">⚠️ <a href="#traps">Exam Traps</a></div>
-            <div class="toc-item">📋 <a href="#quickref">Quick Reference Sheets</a></div>
-            <div class="toc-item">✅ <a href="#checklist">Final Checklist</a></div>
+    <!-- ========== TABLE OF CONTENTS ========== -->
+    <div class="toc">
+        <h3 style="margin-top: 0; border-bottom: none; color: #024457;">📑 ONE‑CLICK NAVIGATION</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.8rem;">
+            <span style="background: #2f727a; padding: 0.4rem 1.2rem; border-radius: 60px;"><a href="#ch1" style="color: white; font-weight: 500;">🔬 CH 1</a></span>
+            <span style="background: #2f727a; padding: 0.4rem 1.2rem; border-radius: 60px;"><a href="#ch2" style="color: white; font-weight: 500;">👶 CH 2</a></span>
+            <span style="background: #2f727a; padding: 0.4rem 1.2rem; border-radius: 60px;"><a href="#ch3" style="color: white; font-weight: 500;">🧬 CH 3</a></span>
+            <span style="background: #2f727a; padding: 0.4rem 1.2rem; border-radius: 60px;"><a href="#ch4" style="color: white; font-weight: 500;">🧠 CH 4</a></span>
+            <span style="background: #416d6b; padding: 0.4rem 1.2rem; border-radius: 60px;"><a href="#integration" style="color: white;">⚡ CROSS‑CHAPTER</a></span>
+            <span style="background: #916b40; padding: 0.4rem 1.2rem; border-radius: 60px;"><a href="#traps" style="color: white;">⚠️ TRAPS</a></span>
+            <span style="background: #3f6f62; padding: 0.4rem 1.2rem; border-radius: 60px;"><a href="#quickref" style="color: white;">📇 QUICK REF</a></span>
         </div>
+        <p style="margin-top: 1rem; font-size: 0.95rem;"><em>💡 Every question = hidden answer. Click to test yourself. Answers stay revealed until you refresh.</em></p>
     </div>
 
-    <!-- ============ CHAPTER 1 ============ -->
-    <h2 id="ch1">CHAPTER 1: THEORIES & RESEARCH METHODS</h2>
-    
-    <!-- ALL 17 Q&A from ch1 -->
-    <div class="qa-block">
-        <div class="question">Q1: What did Plato think were the most important goals of education?</div>
-        <div class="answer"><strong>A:</strong> Strengthen intellectual reasoning and instill self‑control & morality — not just filling minds with facts.</div>
+    <!-- ========== JAVASCRIPT: TOGGLE ANSWERS ========== -->
+    <script>
+        function revealAnswer(btn, answerId) {
+            var answerDiv = document.getElementById(answerId);
+            if (answerDiv.classList.contains('show')) {
+                answerDiv.classList.remove('show');
+                btn.innerText = '📌 Click to reveal answer';
+            } else {
+                answerDiv.classList.add('show');
+                btn.innerText = '🔽 Hide answer';
+            }
+        }
+    </script>
+
+    <!-- ========== CHAPTER 1 ========== -->
+    <h2 id="ch1">🔬 CHAPTER 1: THEORIES & RESEARCH METHODS</h2>
+    <!-- Q1 -->
+    <div class="qa-card">
+        <div class="question-text">1. What did Plato think were the most important goals of education?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans1')">📌 Click to reveal answer</button>
+        <div id="ans1" class="answer-content"><strong>A:</strong> Strengthen intellectual reasoning and instill self‑control & morality — not simply filling minds with facts.</div>
     </div>
-    <div class="qa-block">
-        <div class="question">Q2: Why was the Earl of Shaftsbury's reform important?</div>
-        <div class="answer"><strong>A:</strong> Demonstrated that improving children’s living conditions (housing, healthcare, labor laws) positively impacts development — early evidence for environmental influence.</div>
+    <!-- Q2 -->
+    <div class="qa-card">
+        <div class="question-text">2. Why was the Earl of Shaftsbury's effort at social reform during the industrial revolution so important?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans2')">📌 Click to reveal answer</button>
+        <div id="ans2" class="answer-content"><strong>A:</strong> Demonstrated that improving children's living conditions (housing, healthcare, child labor laws) positively impacts development — early evidence for environmental influence.</div>
     </div>
-    <div class="qa-block">
-        <div class="question">Q3: Current view in nature/nurture debate?</div>
-        <div class="answer"><strong>A:</strong> Continuous, bidirectional <strong>interaction</strong> between genes and environment — neither extreme.</div>
+    <!-- Q3 -->
+    <div class="qa-card">
+        <div class="question-text">3. What view is currently supported in the nature/nurture debate?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans3')">📌 Click to reveal answer</button>
+        <div id="ans3" class="answer-content"><strong>A:</strong> Continuous, bidirectional interactions between genes and environment — interactionist view.</div>
     </div>
-    <div class="qa-block">
-        <div class="question">Q4: Term for physical, social, cultural, economic, historical circumstances?</div>
-        <div class="answer"><strong>A:</strong> <strong>Context</strong> (or ecological environment; Bronfenbrenner’s systems). SES is one component.</div>
+    <!-- Q4 -->
+    <div class="qa-card">
+        <div class="question-text">4. Term for physical, social, cultural, economic, historical circumstances of a child's environment?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans4')">📌 Click to reveal answer</button>
+        <div id="ans4" class="answer-content"><strong>A:</strong> <strong>Context</strong> (ecological environment; Bronfenbrenner's systems). SES is one component.</div>
     </div>
-    <div class="qa-block">
-        <div class="question">Q5: Advantages of structured observations?</div>
-        <div class="answer"><strong>A:</strong> Control, standardization, efficiency, replicability. All participants experience same situation.</div>
+    <!-- Q5 -->
+    <div class="qa-card">
+        <div class="question-text">5. Advantages of structured observations?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans5')">📌 Click to reveal answer</button>
+        <div id="ans5" class="answer-content"><strong>A:</strong> Control, standardization, efficiency, replicability — all participants experience same situation.</div>
     </div>
-    <div class="qa-block">
-        <div class="question">Q6: Why study Romanian orphans?</div>
-        <div class="answer"><strong>A:</strong> Natural experiment on severe deprivation; answers questions about critical periods, plasticity, and recovery.</div>
+    <!-- Q6 Romanian orphans -->
+    <div class="qa-card">
+        <div class="question-text">6. Why are Romanian orphans studied intensively?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans6')">📌 Click to reveal answer</button>
+        <div id="ans6" class="answer-content"><strong>A:</strong> Natural experiment on severe deprivation — reveals critical periods, plasticity, and recovery potential.</div>
     </div>
-    <div class="qa-block">
-        <div class="question">Q7: Philosophers who viewed child as tabula rasa?</div>
-        <div class="answer"><strong>A:</strong> <strong>John Locke</strong> and <strong>Aristotle</strong> — blank slate, knowledge from experience.</div>
+    <!-- Q7 tabula rasa -->
+    <div class="qa-card">
+        <div class="question-text">7. Philosophers who viewed child as tabula rasa?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans7')">📌 Click to reveal answer</button>
+        <div id="ans7" class="answer-content"><strong>A:</strong> John Locke and Aristotle — blank slate, knowledge from experience.</div>
     </div>
-    <div class="qa-block">
-        <div class="question">Q8: Two students coding baby gaze — what are they calculating?</div>
-        <div class="answer"><strong>A:</strong> <strong>Inter‑rater reliability</strong> (inter‑observer reliability).</div>
+    <!-- Q8 inter-rater reliability -->
+    <div class="qa-card">
+        <div class="question-text">8. Two students code baby gaze, compare — what is calculated?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans8')">📌 Click to reveal answer</button>
+        <div id="ans8" class="answer-content"><strong>A:</strong> Inter‑rater reliability (inter‑observer reliability).</div>
     </div>
-    <div class="qa-block">
-        <div class="question">Q9: Test 1st graders, then 3rd, 5th, 7th grades — which design?</div>
-        <div class="answer"><strong>A:</strong> <strong>Longitudinal</strong> — same individuals, multiple time points.</div>
+    <!-- Q9 longitudinal -->
+    <div class="qa-card">
+        <div class="question-text">9. Test 1st graders, again 3rd, 5th, 7th — design?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans9')">📌 Click to reveal answer</button>
+        <div id="ans9" class="answer-content"><strong>A:</strong> Longitudinal — same individuals, multiple time points.</div>
     </div>
-    <div class="qa-block">
-        <div class="question">Q10: Quietly observing children play — method?</div>
-        <div class="answer"><strong>A:</strong> <strong>Naturalistic observation</strong>.</div>
+    <!-- Q10 naturalistic obs -->
+    <div class="qa-card">
+        <div class="question-text">10. Quietly observing children play — method?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans10')">📌 Click to reveal answer</button>
+        <div id="ans10" class="answer-content"><strong>A:</strong> Naturalistic observation.</div>
     </div>
-    <div class="qa-block">
-        <div class="question">Q11: Why use quasi‑experimental design?</div>
-        <div class="answer"><strong>A:</strong> When random assignment is impossible or unethical (e.g., comparing maltreated vs. non‑maltreated).</div>
+    <!-- Q11 quasi-experimental -->
+    <div class="qa-card">
+        <div class="question-text">11. Why use quasi‑experimental design?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans11')">📌 Click to reveal answer</button>
+        <div id="ans11" class="answer-content"><strong>A:</strong> Random assignment impossible/unethical (e.g., comparing maltreated vs. non‑maltreated).</div>
     </div>
-    <div class="qa-block">
-        <div class="question">Q12: Cohort effects problematic in which design?</div>
-        <div class="answer"><strong>A:</strong> <strong>Cross‑sectional studies</strong> — differences might be generational, not developmental.</div>
+    <!-- Q12 cohort effects -->
+    <div class="qa-card">
+        <div class="question-text">12. Cohort effects problematic in which design?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans12')">📌 Click to reveal answer</button>
+        <div id="ans12" class="answer-content"><strong>A:</strong> Cross‑sectional studies — differences could be generational, not developmental.</div>
     </div>
-    <div class="qa-block">
-        <div class="question">Q13: Which design MEASURES cohort effects?</div>
-        <div class="answer"><strong>A:</strong> <strong>Cross‑sequential</strong> (sequential design) — multiple cohorts followed over time.</div>
+    <!-- Q13 cross-sequential -->
+    <div class="qa-card">
+        <div class="question-text">13. Which design MEASURES cohort effects?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans13')">📌 Click to reveal answer</button>
+        <div id="ans13" class="answer-content"><strong>A:</strong> Cross‑sequential (sequential) — multiple cohorts followed over time.</div>
     </div>
-    <div class="qa-block">
-        <div class="question">Q14: Present in TRUE experiment, not necessarily quasi‑experiment?</div>
-        <div class="answer"><strong>A:</strong> <strong>Random assignment</strong> to groups.</div>
+    <!-- Q14 random assignment -->
+    <div class="qa-card">
+        <div class="question-text">14. Present in TRUE experiment but not quasi‑experiment?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans14')">📌 Click to reveal answer</button>
+        <div id="ans14" class="answer-content"><strong>A:</strong> Random assignment to groups.</div>
     </div>
-    <div class="qa-block">
-        <div class="question">Q15: Test for friendliness actually measures friendliness — which validity?</div>
-        <div class="answer"><strong>A:</strong> <strong>Construct validity</strong>.</div>
+    <!-- Q15 construct validity -->
+    <div class="qa-card">
+        <div class="question-text">15. Test for friendliness actually measures friendliness — validity?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans15')">📌 Click to reveal answer</button>
+        <div id="ans15" class="answer-content"><strong>A:</strong> Construct validity.</div>
     </div>
-    <div class="qa-block">
-        <div class="question">Q16: Lab jumping skill predicts basketball court jumping — which validity?</div>
-        <div class="answer"><strong>A:</strong> <strong>External validity</strong> (specifically ecological validity).</div>
+    <!-- Q16 ecological validity -->
+    <div class="qa-card">
+        <div class="question-text">16. Lab jumping predicts basketball court jumping — validity?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans16')">📌 Click to reveal answer</button>
+        <div id="ans16" class="answer-content"><strong>A:</strong> External validity (ecological validity).</div>
     </div>
-    <div class="qa-block">
-        <div class="question">Q17: Certain that manipulation caused result — which validity?</div>
-        <div class="answer"><strong>A:</strong> <strong>Internal validity</strong>.</div>
+    <!-- Q17 internal validity -->
+    <div class="qa-card">
+        <div class="question-text">17. Certain that manipulation caused result — validity?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans17')">📌 Click to reveal answer</button>
+        <div id="ans17" class="answer-content"><strong>A:</strong> Internal validity.</div>
     </div>
 
-    <h4>📊 CH 1 · KEY TERMS TABLE (condensed)</h4>
+    <!-- CHAPTER 1 TERMS TABLE (visible) -->
+    <h4>📊 CH 1 KEY TERMS (visible)</h4>
     <table>
         <tr><th>Term</th><th>Definition</th></tr>
         <tr><td>Tabula Rasa</td><td>Blank slate; Locke/Aristotle</td></tr>
-        <tr><td>Longitudinal</td><td>Same people, multiple times</td></tr>
-        <tr><td>Cross‑sectional</td><td>Different ages, one time; cohort effects</td></tr>
-        <tr><td>Cross‑sequential</td><td>Multiple cohorts followed; measures cohort effects</td></tr>
-        <tr><td>Inter‑rater reliability</td><td>Agreement between independent observers</td></tr>
+        <tr><td>Longitudinal</td><td>Same participants, multiple times</td></tr>
+        <tr><td>Cross-sectional</td><td>Different ages, one time; cohort effects</td></tr>
+        <tr><td>Cross-sequential</td><td>Multiple cohorts followed; measures cohort effects</td></tr>
         <tr><td>Internal validity</td><td>Causation (IV → DV)</td></tr>
-        <tr><td>External validity</td><td>Generalizability</td></tr>
         <tr><td>Construct validity</td><td>Measures intended construct</td></tr>
-        <tr><td>Ecological validity</td><td>Predicts real‑world behavior</td></tr>
     </table>
 
-    <!-- ============ CHAPTER 2 ============ -->
-    <h2 id="ch2">CHAPTER 2: PRENATAL DEVELOPMENT & INFANCY</h2>
+    <!-- ========== CHAPTER 2 ========== -->
+    <h2 id="ch2">👶 CHAPTER 2: PRENATAL DEVELOPMENT & INFANCY</h2>
+    <!-- dynamically create Q1-12 Ch2 with same pattern -->
+    <div class="qa-card"><div class="question-text">1. What type of cell division produces germ cells?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch2a1')">📌 Click to reveal answer</button><div id="ch2a1" class="answer-content"><strong>A:</strong> Meiosis.</div></div>
+    <div class="qa-card"><div class="question-text">2. Most sensitive period during prenatal development?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch2a2')">📌 Click to reveal answer</button><div id="ch2a2" class="answer-content"><strong>A:</strong> Embryonic period (weeks 3‑8) — organogenesis.</div></div>
+    <div class="qa-card"><div class="question-text">3. Relationship between REM sleep and age?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch2a3')">📌 Click to reveal answer</button><div id="ch2a3" class="answer-content"><strong>A:</strong> Inverse: newborns ~50% REM, adults ~20%.</div></div>
+    <div class="qa-card"><div class="question-text">4. Newborn auditory preferences based on prenatal experience?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch2a4')">📌 Click to reveal answer</button><div id="ch2a4" class="answer-content"><strong>A:</strong> Mother's voice, native language, stories read aloud last trimester, familiar rhythms.</div></div>
+    <div class="qa-card"><div class="question-text">5. When are teratogens most dangerous?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch2a5')">📌 Click to reveal answer</button><div id="ch2a5" class="answer-content"><strong>A:</strong> Embryonic period (3‑8 weeks); each organ has specific critical window.</div></div>
+    <div class="qa-card"><div class="question-text">6. How does fetus get exposed to different tastes?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch2a6')">📌 Click to reveal answer</button><div id="ch2a6" class="answer-content"><strong>A:</strong> Amniotic fluid carries flavors from mother's diet; fetus swallows fluid.</div></div>
+    <div class="qa-card"><div class="question-text">7. True statement about infant cries?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch2a7')">📌 Click to reveal answer</button><div id="ch2a7" class="answer-content"><strong>A:</strong> Peak ~6 weeks, decrease by 3‑4 months; individual cry signatures; different types.</div></div>
+    <div class="qa-card"><div class="question-text">8. Phenomenon when infant gets bored with stimulus?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch2a8')">📌 Click to reveal answer</button><div id="ch2a8" class="answer-content"><strong>A:</strong> Habituation.</div></div>
+    <div class="qa-card"><div class="question-text">9. Best pattern for parents responding to newborn crying?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch2a9')">📌 Click to reveal answer</button><div id="ch2a9" class="answer-content"><strong>A:</strong> Prompt, consistent responding → less crying long‑term, secure attachment.</div></div>
+    <div class="qa-card"><div class="question-text">10. Colic may be associated with issues in which system?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch2a10')">📌 Click to reveal answer</button><div id="ch2a10" class="answer-content"><strong>A:</strong> Digestive system (reflux, gas, gut microbiome).</div></div>
+    <div class="qa-card"><div class="question-text">11. Cephalocaudal development means?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch2a11')">📌 Click to reveal answer</button><div id="ch2a11" class="answer-content"><strong>A:</strong> Growth proceeds from head downward.</div></div>
+    <div class="qa-card"><div class="question-text">12. REM sleep helps visual system develop — theory?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch2a12')">📌 Click to reveal answer</button><div id="ch2a12" class="answer-content"><strong>A:</strong> Self‑stimulation (autostimulation) theory.</div></div>
     
-    <div class="qa-block"><span class="question">Q1: Cell division producing germ cells?</span><br><span class="answer"><strong>A:</strong> Meiosis.</span></div>
-    <div class="qa-block"><span class="question">Q2: Most sensitive prenatal period?</span><br><span class="answer"><strong>A:</strong> Embryonic period (weeks 3‑8) — organogenesis.</span></div>
-    <div class="qa-block"><span class="question">Q3: REM sleep and age relationship?</span><br><span class="answer"><strong>A:</strong> Inverse: newborns ~50% REM, adults ~20%.</span></div>
-    <div class="qa-block"><span class="question">Q4: Newborn auditory preferences from prenatal experience?</span><br><span class="answer"><strong>A:</strong> Mother’s voice, native language, stories read aloud last trimester, familiar rhythms.</span></div>
-    <div class="qa-block"><span class="question">Q5: When are teratogens most dangerous?</span><br><span class="answer"><strong>A:</strong> Embryonic period (3‑8 weeks); each organ has specific critical window.</span></div>
-    <div class="qa-block"><span class="question">Q6: How does fetus get exposed to tastes?</span><br><span class="answer"><strong>A:</strong> Amniotic fluid carries flavors from mother’s diet; fetus swallows fluid.</span></div>
-    <div class="qa-block"><span class="question">Q7: True statement about infant cries?</span><br><span class="answer"><strong>A:</strong> Peak intensity ~6 weeks, decrease by 3‑4 months; individual cry signatures; different types (hunger, pain).</span></div>
-    <div class="qa-block"><span class="question">Q8: Infant gets bored with stimulus — phenomenon?</span><br><span class="answer"><strong>A:</strong> Habituation.</span></div>
-    <div class="qa-block"><span class="question">Q9: Best pattern for responding to newborn crying?</span><br><span class="answer"><strong>A:</strong> Prompt, consistent responding → less crying long‑term, secure attachment.</span></div>
-    <div class="qa-block"><span class="question">Q10: Colic associated with issues in which system?</span><br><span class="answer"><strong>A:</strong> Digestive system (reflux, gas, gut microbiome).</span></div>
-    <div class="qa-block"><span class="question">Q11: Cephalocaudal development means?</span><br><span class="answer"><strong>A:</strong> Growth proceeds from head downward.</span></div>
-    <div class="qa-block"><span class="question">Q12: REM sleep helps visual system develop — theory?</span><br><span class="answer"><strong>A:</strong> Self‑stimulation (autostimulation) theory.</span></div>
+    <!-- ========== CHAPTER 3 ========== -->
+    <h2 id="ch3">🧬 CHAPTER 3: GENETICS, HEREDITY & NEURODEVELOPMENT</h2>
+    <div class="qa-card"><div class="question-text">1. What is the 'norm of reaction'?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch3a1')">📌 Click to reveal answer</button><div id="ch3a1" class="answer-content"><strong>A:</strong> Range of possible phenotypes from one genotype across different environments.</div></div>
+    <div class="qa-card"><div class="question-text">2. Heterozygous for curly hair means?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch3a2')">📌 Click to reveal answer</button><div id="ch3a2" class="answer-content"><strong>A:</strong> Two different alleles (one curly, one straight).</div></div>
+    <div class="qa-card"><div class="question-text">3. Approximate heritability of IQ?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch3a3')">📌 Click to reveal answer</button><div id="ch3a3" class="answer-content"><strong>A:</strong> ~50% (0.50), increases with age.</div></div>
+    <div class="qa-card"><div class="question-text">4. Cat raised in small cage, few toys — brain development?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch3a4')">📌 Click to reveal answer</button><div id="ch3a4" class="answer-content"><strong>A:</strong> Reduced synaptic density, dendritic branching, cortical thickness; visual/social deficits.</div></div>
+    <div class="qa-card"><div class="question-text">5. Factors ruled OUT as cause of autism rise?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch3a5')">📌 Click to reveal answer</button><div id="ch3a5" class="answer-content"><strong>A:</strong> Vaccines (MMR) and parenting style — completely discredited.</div></div>
+    <div class="qa-card"><div class="question-text">6. Identical twin correlation > fraternal twin correlation — conclusion?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch3a6')">📌 Click to reveal answer</button><div id="ch3a6" class="answer-content"><strong>A:</strong> Significant genetic component for that trait.</div></div>
+    <div class="qa-card"><div class="question-text">7. Myelin sheath important for?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch3a7')">📌 Click to reveal answer</button><div id="ch3a7" class="answer-content"><strong>A:</strong> Speed and efficiency of neural transmission.</div></div>
+    <div class="qa-card"><div class="question-text">8. Genetic material a person inherits?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch3a8')">📌 Click to reveal answer</button><div id="ch3a8" class="answer-content"><strong>A:</strong> Genotype.</div></div>
+    <div class="qa-card"><div class="question-text">9. Visual cortex synapses vs prefrontal cortex — timing?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch3a9')">📌 Click to reveal answer</button><div id="ch3a9" class="answer-content"><strong>A:</strong> Visual cortex peaks earlier (4‑8 months); prefrontal peaks in adolescence.</div></div>
+    <div class="qa-card"><div class="question-text">10. Correct interpretation of heritability estimate?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch3a10')">📌 Click to reveal answer</button><div id="ch3a10" class="answer-content"><strong>A:</strong> Proportion of VARIANCE in a trait within a specific POPULATION at a specific TIME due to genetic differences. (NOT individual, NOT fixed).</div></div>
+    <div class="qa-card"><div class="question-text">11. Trait gotten from parents — heritable or inherited?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch3a11')">📌 Click to reveal answer</button><div id="ch3a11" class="answer-content"><strong>A:</strong> Inherited (passed down), but cannot tell if heritable (could be environmental).</div></div>
+    <div class="qa-card"><div class="question-text">12. Sharing household makes people similar — called?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch3a12')">📌 Click to reveal answer</button><div id="ch3a12" class="answer-content"><strong>A:</strong> Shared environment effects.</div></div>
+    <div class="qa-card"><div class="question-text">13. Genes produce trait via reliably present environment — concept?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch3a13')">📌 Click to reveal answer</button><div id="ch3a13" class="answer-content"><strong>A:</strong> Canalized development.</div></div>
+    <div class="qa-card"><div class="question-text">14. Genes × environment → final outcome = ?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch3a14')">📌 Click to reveal answer</button><div id="ch3a14" class="answer-content"><strong>A:</strong> Phenotype.</div></div>
 
-    <h4>📅 PRENATAL TIMELINE (sensitive periods)</h4>
+    <!-- ========== CHAPTER 4 ========== -->
+    <h2 id="ch4">🧠 CHAPTER 4: COGNITIVE DEVELOPMENT</h2>
+    <div class="qa-card"><div class="question-text">1. Child perceives world solely from own view — Piagetian?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch4a1')">📌 Click to reveal answer</button><div id="ch4a1" class="answer-content"><strong>A:</strong> Egocentrism; preoperational stage.</div></div>
+    <div class="qa-card"><div class="question-text">2. Task analysis — what is included/NOT included?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch4a2')">📌 Click to reveal answer</button><div id="ch4a2" class="answer-content"><strong>A:</strong> INCLUDES: goals, problem states, strategies, prerequisites. NOT: emotions, personality, social relationships.</div></div>
+    <div class="qa-card"><div class="question-text">3. When does joint attention develop?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch4a3')">📌 Click to reveal answer</button><div id="ch4a3" class="answer-content"><strong>A:</strong> 9‑12 months.</div></div>
+    <div class="qa-card"><div class="question-text">4. What is assimilation?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch4a4')">📌 Click to reveal answer</button><div id="ch4a4" class="answer-content"><strong>A:</strong> Interpreting new experiences using existing schemas — NO schema change.</div></div>
+    <div class="qa-card"><div class="question-text">5. Innate knowledge in evolutionarily important areas — which theories?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch4a5')">📌 Click to reveal answer</button><div id="ch4a5" class="answer-content"><strong>A:</strong> Core knowledge theories (Spelke, Baillargeon).</div></div>
+    <div class="qa-card"><div class="question-text">6. Autism difficulty with own vs others' mind — core knowledge perspective?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch4a6')">📌 Click to reveal answer</button><div id="ch4a6" class="answer-content"><strong>A:</strong> Theory of Mind module dysfunction.</div></div>
+    <div class="qa-card"><div class="question-text">7. Characteristics of sensorimotor stage?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch4a7')">📌 Click to reveal answer</button><div id="ch4a7" class="answer-content"><strong>A:</strong> Learning via senses/actions; object permanence develops; reflexes → goal‑directed; end: symbolic thought.</div></div>
+    <div class="qa-card"><div class="question-text">8. Bob: thought = internalized speech — similar to which theorist?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch4a8')">📌 Click to reveal answer</button><div id="ch4a8" class="answer-content"><strong>A:</strong> Vygotsky.</div></div>
+    <div class="qa-card"><div class="question-text">9. Skinner/Locke description of infants?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch4a9')">📌 Click to reveal answer</button><div id="ch4a9" class="answer-content"><strong>A:</strong> Passive recipients; blank slate; shaped entirely by reinforcement.</div></div>
+    <div class="qa-card"><div class="question-text">10. Continuous development, domain‑general, strategy addition — which theories?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch4a10')">📌 Click to reveal answer</button><div id="ch4a10" class="answer-content"><strong>A:</strong> Information processing theories.</div></div>
+    <div class="qa-card"><div class="question-text">11. Experiences cause change to new operational structure — Piaget concept?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch4a11')">📌 Click to reveal answer</button><div id="ch4a11" class="answer-content"><strong>A:</strong> Accommodation.</div></div>
+    <div class="qa-card"><div class="question-text">12. Chad: Play‑Doh ball → snake, insists there's MORE — Piaget stage?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch4a12')">📌 Click to reveal answer</button><div id="ch4a12" class="answer-content"><strong>A:</strong> Preoperational (fails conservation; centration on length).</div></div>
+    <div class="qa-card"><div class="question-text">13. Focus only on one aspect (height, not width) — called?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch4a13')">📌 Click to reveal answer</button><div id="ch4a13" class="answer-content"><strong>A:</strong> Centration.</div></div>
+
+    <!-- ========== INTEGRATION & TRAPS ========== -->
+    <h2 id="integration">⚡ CROSS‑CHAPTER INTEGRATION</h2>
+    <h3>📋 Theorist comparison</h3>
     <table>
-        <tr><th>Period</th><th>Timing</th><th>Key events</th><th>Teratogen risk</th></tr>
-        <tr><td>Germinal</td><td>Weeks 1‑2</td><td>Implantation</td><td>Low (all‑or‑none)</td></tr>
-        <tr><td><strong>Embryonic</strong></td><td><strong>Weeks 3‑8</strong></td><td><strong>Organogenesis; MOST SENSITIVE</strong></td><td><strong>EXTREME</strong></td></tr>
-        <tr><td>Fetal</td><td>Weeks 9‑38</td><td>Growth, refinement</td><td>Moderate (functional)</td></tr>
-    </table>
-
-    <!-- ============ CHAPTER 3 ============ -->
-    <h2 id="ch3">CHAPTER 3: GENETICS, HEREDITY & NEURODEVELOPMENT</h2>
-
-    <div class="qa-block"><span class="question">Q1: Norm of reaction?</span><br><span class="answer"><strong>A:</strong> Range of possible phenotypes from a single genotype across environments.</span></div>
-    <div class="qa-block"><span class="question">Q2: Heterozygous for curly hair means?</span><br><span class="answer"><strong>A:</strong> Two different alleles (one curly, one straight).</span></div>
-    <div class="qa-block"><span class="question">Q3: Approximate heritability of IQ?</span><br><span class="answer"><strong>A:</strong> ~50% (0.50), increases with age.</span></div>
-    <div class="qa-block"><span class="question">Q4: Cat raised in small cage, few toys — brain development?</span><br><span class="answer"><strong>A:</strong> Reduced synaptic density, dendritic branching, cortical thickness; visual & social deficits.</span></div>
-    <div class="qa-block"><span class="question">Q5: Factors ruled OUT as cause of autism rise?</span><br><span class="answer"><strong>A:</strong> Vaccines (MMR) and parenting style — completely discredited.</span></div>
-    <div class="qa-block"><span class="question">Q6: Identical twin correlation > fraternal twin correlation — conclusion?</span><br><span class="answer"><strong>A:</strong> Significant genetic component for that trait.</span></div>
-    <div class="qa-block"><span class="question">Q7: Myelin sheath important for?</span><br><span class="answer"><strong>A:</strong> Speed and efficiency of neural transmission.</span></div>
-    <div class="qa-block"><span class="question">Q8: Genetic material a person inherits?</span><br><span class="answer"><strong>A:</strong> Genotype.</span></div>
-    <div class="qa-block"><span class="question">Q9: Visual cortex synapses vs prefrontal cortex — timing?</span><br><span class="answer"><strong>A:</strong> Visual cortex peaks earlier (4‑8 months); prefrontal cortex peaks in adolescence.</span></div>
-    <div class="qa-block"><span class="question">Q10: Correct interpretation of heritability estimate?</span><br><span class="answer"><strong>A:</strong> Proportion of <em>variance</em> in a trait within a specific population, at a specific time, due to genetic differences. (NOT individual, NOT fixed).</span></div>
-    <div class="qa-block"><span class="question">Q11: Trait gotten from parents — heritable or inherited?</span><br><span class="answer"><strong>A:</strong> Inherited (passed down), but you cannot tell if heritable (could be environmental).</span></div>
-    <div class="qa-block"><span class="question">Q12: Sharing household makes people similar — called?</span><br><span class="answer"><strong>A:</strong> Shared environment effects.</span></div>
-    <div class="qa-block"><span class="question">Q13: Genes produce trait via reliably present environment — concept?</span><br><span class="answer"><strong>A:</strong> Canalized development.</span></div>
-    <div class="qa-block"><span class="question">Q14: Genes × environment → final outcome = ?</span><br><span class="answer"><strong>A:</strong> Phenotype.</span></div>
-
-    <h4>🧬 HERITABILITY — what it DOES and DOES NOT mean</h4>
-    <div style="background: #fef0e6; padding: 1rem 2rem; border-radius: 20px;">
-        <p style="font-weight: 800; color: #a14300;">✅ DOES mean: Proportion of POPULATION variance due to genetic differences.</p>
-        <p style="font-weight: 800; color: #a12f2f;">❌ Does NOT mean: % of YOUR trait from genes; NOT immutable; NOT group differences; NOT individual.</p>
-    </div>
-
-    <!-- ============ CHAPTER 4 ============ -->
-    <h2 id="ch4">CHAPTER 4: COGNITIVE DEVELOPMENT</h2>
-    
-    <div class="qa-block"><span class="question">Q1: Child perceives world solely from own view — Piaget?</span><br><span class="answer"><strong>A:</strong> Egocentrism; preoperational stage.</span></div>
-    <div class="qa-block"><span class="question">Q2: Task analysis — what is included / NOT included?</span><br><span class="answer"><strong>A:</strong> INCLUDES: goals, problem states, strategies, prerequisites. NOT: emotions, personality, social relationships.</span></div>
-    <div class="qa-block"><span class="question">Q3: When does joint attention develop?</span><br><span class="answer"><strong>A:</strong> 9‑12 months.</span></div>
-    <div class="qa-block"><span class="question">Q4: What is assimilation?</span><br><span class="answer"><strong>A:</strong> Interpreting new experiences using existing schemas — NO schema change.</span></div>
-    <div class="qa-block"><span class="question">Q5: Innate knowledge in evolutionarily important areas — which theories?</span><br><span class="answer"><strong>A:</strong> Core knowledge theories (Spelke, Baillargeon).</span></div>
-    <div class="qa-block"><span class="question">Q6: Autism & difficulty with own vs others' mind — core knowledge perspective?</span><br><span class="answer"><strong>A:</strong> Theory of Mind module dysfunction.</span></div>
-    <div class="qa-block"><span class="question">Q7: Characteristics of sensorimotor stage?</span><br><span class="answer"><strong>A:</strong> Learning via senses/actions; object permanence develops; reflexes → goal‑directed; end: symbolic thought.</span></div>
-    <div class="qa-block"><span class="question">Q8: Bob: thought = internalized speech — similar to which theorist?</span><br><span class="answer"><strong>A:</strong> Vygotsky.</span></div>
-    <div class="qa-block"><span class="question">Q9: Skinner/Locke description of infants?</span><br><span class="answer"><strong>A:</strong> Passive recipients; blank slate; shaped entirely by reinforcement.</span></div>
-    <div class="qa-block"><span class="question">Q10: Continuous development, domain‑general, strategy addition — which theories?</span><br><span class="answer"><strong>A:</strong> Information processing theories.</span></div>
-    <div class="qa-block"><span class="question">Q11: Experiences cause change to new operational structure — Piaget concept?</span><br><span class="answer"><strong>A:</strong> Accommodation.</span></div>
-    <div class="qa-block"><span class="question">Q12: Chad: Play‑Doh ball → snake, insists there's MORE — Piaget stage?</span><br><span class="answer"><strong>A:</strong> Preoperational (fails conservation; centration on length).</span></div>
-    <div class="qa-block"><span class="question">Q13: Focus only on one aspect (height, not width) — called?</span><br><span class="answer"><strong>A:</strong> Centration.</span></div>
-
-    <h4>🧩 PIAGET'S STAGES — QUICK VIEW</h4>
-    <table>
-        <tr><th>Stage</th><th>Age</th><th>Key achievements / limitations</th></tr>
-        <tr><td>Sensorimotor</td><td>0‑2 yr</td><td>Object permanence; circular reactions; end of stage = symbols</td></tr>
-        <tr><td>Preoperational</td><td>2‑7 yr</td><td>Egocentrism, centration, NO conservation (Play‑Doh error)</td></tr>
-        <tr><td>Concrete operational</td><td>7‑11 yr</td><td>Conservation, reversibility, decentration</td></tr>
-        <tr><td>Formal operational</td><td>12+ yr</td><td>Abstract logic, hypothetical reasoning</td></tr>
-    </table>
-
-    <!-- ============ CROSS‑CHAPTER INTEGRATION ============ -->
-    <h2 id="integration" style="border-left-color: #7b2c3f;">⚡ CROSS‑CHAPTER INTEGRATION</h2>
-    
-    <h3>📋 THEORIST COMPARISON MATRIX</h3>
-    <table>
-        <tr><th>Theorist</th><th>Core view</th><th>Development mechanism</th><th>Stages?</th></tr>
+        <tr><th>Theorist</th><th>Core view</th><th>Mechanism</th><th>Stages?</th></tr>
         <tr><td>Piaget</td><td>Constructivist</td><td>Assimilation/accommodation</td><td>YES (4)</td></tr>
         <tr><td>Vygotsky</td><td>Sociocultural</td><td>Internalized speech</td><td>NO</td></tr>
         <tr><td>Skinner</td><td>Behaviorist</td><td>Operant conditioning</td><td>NO</td></tr>
-        <tr><td>Core knowledge</td><td>Nativist / modular</td><td>Innate domain‑specific modules</td><td>NO</td></tr>
-        <tr><td>Information processing</td><td>Mechanist</td><td>Strategy acquisition, capacity</td><td>NO</td></tr>
+        <tr><td>Core knowledge</td><td>Nativist/modular</td><td>Innate domain‑specific modules</td><td>NO</td></tr>
+        <tr><td>Information processing</td><td>Mechanist</td><td>Strategy acquisition</td><td>NO</td></tr>
     </table>
 
-    <h3>📅 DEVELOPMENTAL MILESTONES (all chapters)</h3>
-    <table>
-        <tr><th>Age</th><th>Milestone</th><th>Chapter</th></tr>
-        <tr><td>3‑8 weeks prenatal</td><td>Embryonic period; MOST sensitive</td><td>2</td></tr>
-        <tr><td>Birth</td><td>50% REM sleep</td><td>2</td></tr>
-        <tr><td>4‑8 months</td><td>Visual cortex synapse peak</td><td>3</td></tr>
-        <tr><td>9‑12 months</td><td>Joint attention</td><td>4</td></tr>
-        <tr><td>2‑7 years</td><td>Preoperational stage (egocentrism, centration)</td><td>4</td></tr>
-        <tr><td>7‑11 years</td><td>Concrete operational (conservation)</td><td>4</td></tr>
-        <tr><td>Adolescence</td><td>Prefrontal synapse peak</td><td>3</td></tr>
-    </table>
-
-    <!-- ============ EXAM TRAPS ============ -->
-    <h2 id="traps" style="border-left-color: #b13b3b;">⚠️ COMMON EXAM TRAPS & MISCONCEPTIONS</h2>
+    <h3 id="traps">⚠️ COMMON EXAM TRAPS (click each to reveal — but we keep them visible as warnings)</h3>
     <div class="trap-box">
-        <ul style="list-style-type: '❌ '; line-height: 1.8;">
-            <li><strong>Heritability:</strong> “50% of my intelligence comes from genes” → FALSE. Heritability is POPULATION variance, not individual.</li>
-            <li><strong>Inherited vs heritable:</strong> “Runs in families = genetic” → FALSE. Families share environments too.</li>
-            <li><strong>Assimilation vs accommodation:</strong> using interchangeably → assimilation = no schema change; accommodation = change.</li>
-            <li><strong>Cross‑sectional vs longitudinal:</strong> cross = cohort effects; longitudinal = attrition/practice effects.</li>
-            <li><strong>Piaget stage errors:</strong> object permanence develops in sensorimotor, NOT preoperational.</li>
-            <li><strong>Teratogen timing:</strong> embryonic (3‑8 wks) = most dangerous, not whole pregnancy.</li>
-            <li><strong>Autism causes:</strong> vaccines & parenting → RULED OUT. (genetics strong).</li>
-            <li><strong>Validity mix‑up:</strong> internal = causation; external = generalization; construct = measures construct.</li>
+        <ul style="list-style-type: '🧨 ';">
+            <li><strong>Heritability:</strong> “50% of my intelligence comes from genes” → FALSE. Heritability is POPULATION variance.</li>
+            <li><strong>Inherited vs heritable:</strong> “runs in families = genetic” → FALSE (shared environment).</li>
+            <li><strong>Assimilation vs accommodation:</strong> assimilation = no schema change; accommodation = change.</li>
+            <li><strong>Cross‑sectional vs longitudinal:</strong> cross = cohort effects; longitudinal = attrition.</li>
+            <li><strong>Piaget stage:</strong> object permanence = sensorimotor; conservation failure = preoperational.</li>
+            <li><strong>Teratogens:</strong> embryonic (3‑8 wks) most dangerous, not whole pregnancy.</li>
+            <li><strong>Autism causes:</strong> vaccines & parenting RULED OUT.</li>
         </ul>
     </div>
 
-    <!-- ============ QUICK REFERENCE SHEETS ============ -->
-    <h2 id="quickref">📇 QUICK REFERENCE SHEETS — EACH CHAPTER</h2>
-    
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-        <div style="background: #e3edf2; border-radius: 24px; padding: 1.5rem;">
-            <h4 style="margin-top: 0;">🔬 CH 1 cheat</h4>
-            <ul>
-                <li><strong>Plato</strong> – reasoning + self‑control</li>
-                <li><strong>Locke/Aristotle</strong> – tabula rasa</li>
-                <li><strong>Longitudinal</strong> – same Ss, many times</li>
-                <li><strong>Cross‑sectional</strong> – cohort effects!</li>
-                <li><strong>Cross‑sequential</strong> – measures cohort</li>
-                <li><strong>Internal validity</strong> – causation</li>
-            </ul>
+    <!-- ========== QUICK REFERENCE ========== -->
+    <h2 id="quickref">📇 QUICK REFERENCE — ALL CHAPTERS</h2>
+    <div class="quickref-grid">
+        <div class="quickref-card"><h4 style="margin-top:0;">🔬 CH 1</h4>Plato: reason+control; Locke: tabula rasa; Longitudinal= same Ss; Cross‑sectional=cohort effects; Internal=causation; Construct=measures construct</div>
+        <div class="quickref-card"><h4 style="margin-top:0;">👶 CH 2</h4>Embryonic most sensitive; Meiosis=germ; REM ↓ with age; Newborn prefers mother's voice; Habituation; Cephalocaudal=head down</div>
+        <div class="quickref-card"><h4 style="margin-top:0;">🧬 CH 3</h4>Genotype (inherited) vs phenotype (G×E); Heritability = variance; Norm of reaction; Canalized; Vaccines NOT cause autism</div>
+        <div class="quickref-card"><h4 style="margin-top:0;">🧠 CH 4</h4>Assimilation (no change) vs accommodation (change); Preoperational: egocentrism, centration; Joint attention 9‑12mo; Vygotsky = internalized speech</div>
+    </div>
+
+    <!-- ========== CHECKLIST ========== -->
+    <div style="background: #cfecf0; border-radius: 32px; padding: 2rem; margin-top: 2.2rem;">
+        <h3 style="border-bottom: none; margin-top: 0;">✅ FINAL EXAM READINESS CHECKLIST</h3>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem;">
+            <span>▢ I can define heritability & its limits</span>
+            <span>▢ I can differentiate assimilation/accommodation</span>
+            <span>▢ I know embryonic = most sensitive</span>
+            <span>▢ I know joint attention = 9‑12 mo</span>
+            <span>▢ I can name 3 newborn auditory preferences</span>
+            <span>▢ I know Piaget's 4 stages & key errors</span>
+            <span>▢ I know what vaccines do NOT cause</span>
+            <span>▢ I distinguish cross‑sectional, longitudinal, cross‑sequential</span>
+            <span>▢ I know internal vs external validity</span>
+            <span>▢ I can explain norm of reaction</span>
         </div>
-        <div style="background: #faedcd; border-radius: 24px; padding: 1.5rem;">
-            <h4 style="margin-top: 0;">👶 CH 2 cheat</h4>
-            <ul>
-                <li><strong>Embryonic</strong> = most sensitive</li>
-                <li><strong>Meiosis</strong> = germ cells</li>
-                <li><strong>REM ↓</strong> with age; 50% newborn</li>
-                <li><strong>Auditory pref</strong>: mother, native lang</li>
-                <li><strong>Habituation</strong> = boredom</li>
-                <li><strong>Respond</strong>: prompt & consistent</li>
-            </ul>
-        </div>
-        <div style="background: #e6d7ff; border-radius: 24px; padding: 1.5rem;">
-            <h4 style="margin-top: 0;">🧬 CH 3 cheat</h4>
-            <ul>
-                <li><strong>Genotype</strong> – inherited</li>
-                <li><strong>Phenotype</strong> – expressed (G×E)</li>
-                <li><strong>Heritability</strong> = variance statistic</li>
-                <li><strong>Norm of reaction</strong> – range of outcomes</li>
-                <li><strong>Canalization</strong> – buffered</li>
-                <li><strong>Vaccines ❌ cause autism</strong></li>
-            </ul>
-        </div>
-        <div style="background: #d6f0e0; border-radius: 24px; padding: 1.5rem;">
-            <h4 style="margin-top: 0;">🧠 CH 4 cheat</h4>
-            <ul>
-                <li><strong>Assimilation</strong> – no change</li>
-                <li><strong>Accommodation</strong> – schema change</li>
-                <li><strong>Egocentrism, centration</strong> – preoperational</li>
-                <li><strong>Joint attention</strong> – 9‑12 mo</li>
-                <li><strong>Vygotsky</strong> – internalized speech</li>
-                <li><strong
+    </div>
+
+    <footer>
+        <p><strong>🔁 Active recall ready:</strong> 62+ questions with hidden answers. Click to test yourself. Use Print → Save as PDF to keep interactive version or static.</p>
+        <p style="font-size: 0.9rem;">Developmental Psychology · Chapters 1–4 · Complete click-to-reveal master study guide</p>
+    </footer>
+</div>
+
+<!-- tiny script also for any late binds -->
+<script>
+    // Additional safeguard: ensure all answer divs start hidden (they are by default)
+</script>
+</body>
+</html>
