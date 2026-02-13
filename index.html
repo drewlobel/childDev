@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developmental Psychology Master Study Guide · Chapters 1-4</title>
+    <style>
+        /* GLOBAL RESET & FONTS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f8fafc;
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #0a1e2e;
+            padding: 2rem 1rem;
+        }
+        .guide-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border-radius: 24px;
+            padding: 2.5rem 2.8rem;
+        }
+
+        /* TYPOGRAPHY */
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            background: linear-gradient(145deg, #0b3b5c, #0a4c6e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.25rem;
+            border-bottom: 4px solid #cbd5e1;
+            padding-bottom: 0.5rem;
+        }
+        h2 {
+            font-size: 1.9rem;
+            font-weight: 600;
+            color: #0b3b5c;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            border-left: 10px solid #2c7da0;
+            padding-left: 1.2rem;
+            background: #f1f9ff;
+            line-height: 1.3;
+            border-radius: 0 12px 12px 0;
+        }
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1e6091;
+            margin-top: 1.8rem;
+            margin-bottom: 0.8rem;
+            border-bottom: 2px solid #a9d6e5;
+            padding-bottom: 0.4rem;
+        }
+        h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #184e77;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .section-toc {
+            background: #e9f2fa;
+            padding: 1.6rem 2rem;
+            border-radius: 28px;
+            margin: 2rem 0 1rem;
+            border: 1px solid #b7e0f0;
+        }
+
+        /* TABLES */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.6rem 0;
+            font-size: 0.98rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        th {
+            background-color: #1e3d58;
+            color: white;
+            font-weight: 600;
+            padding: 12px 10px;
+            text-align: left;
+            font-size: 1rem;
+        }
+        td {
+            border: 1px solid #dde7f0;
+            padding: 12px 10px;
+            background-color: white;
+            vertical-align: top;
+        }
+        tr:nth-child(even) td {
+            background-color: #f6fbfe;
+        }
+
+        /* BLOCKS & HIGHLIGHTS */
+        .key-term {
+            background: #fcf4e9;
+            border-left: 6px solid #f39c12;
+            padding: 1.2rem 1.8rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+            font-weight: 500;
+        }
+        .qa-block {
+            background: #f1f9f9;
+            border-radius: 20px;
+            padding: 1.4rem 2rem;
+            margin: 1.6rem 0;
+            border: 1px solid #cbd5e1;
+        }
+        .question {
+            font-weight: 700;
+            color: #0a4c6e;
+            font-size: 1.08rem;
+            margin-bottom: 0.3rem;
+        }
+        .answer {
+            margin-left: 1.2rem;
+            color: #1e3750;
+        }
+
+        .trap-box {
+            background: #ffecf0;
+            border: 2px solid #e63946;
+            border-radius: 20px;
+            padding: 1.2rem 2rem;
+            margin: 1.5rem 0;
+        }
+
+        .milestone {
+            background: #def0d9;
+            border-radius: 14px;
+            padding: 0.8rem 1.6rem;
+            margin: 1rem 0;
+            border-left: 8px solid #2d6a4f;
+        }
+        ul, ol {
+            margin-left: 1.8rem;
+            margin-bottom: 1.2rem;
+        }
+        li {
+            margin-bottom: 0.3rem;
+        }
+
+        .button-pdf {
+            background: #1e6091;
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1.1rem;
+            border-radius: 40px;
+            font-weight: 600;
+            margin: 1rem 0 2rem;
+            display: inline-block;
+            border: 1px solid white;
+        }
+
+        hr {
+            margin: 2.2rem 0;
+            border: 2px dashed #9cb4d4;
+        }
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            color: #3a5f6e;
+            border-top: 2px solid #cbd5e1;
+            padding-top: 1.8rem;
+            font-size: 0.95rem;
+        }
+
+        /* TOC */
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+        .toc-item {
+            background: white;
+            padding: 0.6rem 1rem;
+            border-radius: 40px;
+            border: 1px solid #89aec5;
+            text-align: center;
+            font-weight: 500;
+        }
+        a {
+            color: #0d3c4f;
+            text-decoration: none;
+        }
+        .header-mini {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+    </style>
+</head>
+<body>
+<div class="guide-container">
+
+    <!-- MAIN HEADER -->
+    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+        <h1>📘 DEVELOPMENTAL PSYCHOLOGY<br><span style="font-size: 1.9rem; -webkit-text-fill-color: #1f5068;">MASTER STUDY GUIDE · CHAPTERS 1–4</span></h1>
+        <span style="background: #0f2f44; color: white; padding: 0.4rem 1.2rem; border-radius: 60px; font-weight: 600;">62 Q&A · 38 PAGES</span>
+    </div>
+    <p style="font-size: 1.2rem; margin-top: 0.2rem; color: #2a4a5e;"><strong>Complete integration:</strong> all questions, all answers, all tables, cross‑chapter synthesis.</p>
+    
+    <!-- TABLE OF CONTENTS (clickable for PDF/bookmark) -->
+    <div class="section-toc">
+        <h3 style="margin-top: 0; border-bottom: none; color: #083c5a;">📑 COMPREHENSIVE TABLE OF CONTENTS</h3>
+        <div class="toc-grid">
+            <div class="toc-item">🔬 <a href="#ch1">CH 1: Theories & Methods</a></div>
+            <div class="toc-item">👶 <a href="#ch2">CH 2: Prenatal & Infancy</a></div>
+            <div class="toc-item">🧬 <a href="#ch3">CH 3: Genetics & Brain</a></div>
+            <div class="toc-item">🧠 <a href="#ch4">CH 4: Cognitive Development</a></div>
+            <div class="toc-item">⚖️ <a href="#integration">Cross‑Chapter Integration</a></div>
+            <div class="toc-item">⚠️ <a href="#traps">Exam Traps</a></div>
+            <div class="toc-item">📋 <a href="#quickref">Quick Reference Sheets</a></div>
+            <div class="toc-item">✅ <a href="#checklist">Final Checklist</a></div>
+        </div>
+    </div>
+
+    <!-- ============ CHAPTER 1 ============ -->
+    <h2 id="ch1">CHAPTER 1: THEORIES & RESEARCH METHODS</h2>
+    
+    <!-- ALL 17 Q&A from ch1 -->
+    <div class="qa-block">
+        <div class="question">Q1: What did Plato think were the most important goals of education?</div>
+        <div class="answer"><strong>A:</strong> Strengthen intellectual reasoning and instill self‑control & morality — not just filling minds with facts.</div>
+    </div>
+    <div class="qa-block">
+        <div class="question">Q2: Why was the Earl of Shaftsbury's reform important?</div>
+        <div class="answer"><strong>A:</strong> Demonstrated that improving children’s living conditions (housing, healthcare, labor laws) positively impacts development — early evidence for environmental influence.</div>
+    </div>
+    <div class="qa-block">
+        <div class="question">Q3: Current view in nature/nurture debate?</div>
+        <div class="answer"><strong>A:</strong> Continuous, bidirectional <strong>interaction</strong> between genes and environment — neither extreme.</div>
+    </div>
+    <div class="qa-block">
+        <div class="question">Q4: Term for physical, social, cultural, economic, historical circumstances?</div>
+        <div class="answer"><strong>A:</strong> <strong>Context</strong> (or ecological environment; Bronfenbrenner’s systems). SES is one component.</div>
+    </div>
+    <div class="qa-block">
+        <div class="question">Q5: Advantages of structured observations?</div>
+        <div class="answer"><strong>A:</strong> Control, standardization, efficiency, replicability. All participants experience same situation.</div>
+    </div>
+    <div class="qa-block">
+        <div class="question">Q6: Why study Romanian orphans?</div>
+        <div class="answer"><strong>A:</strong> Natural experiment on severe deprivation; answers questions about critical periods, plasticity, and recovery.</div>
+    </div>
+    <div class="qa-block">
+        <div class="question">Q7: Philosophers who viewed child as tabula rasa?</div>
+        <div class="answer"><strong>A:</strong> <strong>John Locke</strong> and <strong>Aristotle</strong> — blank slate, knowledge from experience.</div>
+    </div>
+    <div class="qa-block">
+        <div class="question">Q8: Two students coding baby gaze — what are they calculating?</div>
+        <div class="answer"><strong>A:</strong> <strong>Inter‑rater reliability</strong> (inter‑observer reliability).</div>
+    </div>
+    <div class="qa-block">
+        <div class="question">Q9: Test 1st graders, then 3rd, 5th, 7th grades — which design?</div>
+        <div class="answer"><strong>A:</strong> <strong>Longitudinal</strong> — same individuals, multiple time points.</div>
+    </div>
+    <div class="qa-block">
+        <div class="question">Q10: Quietly observing children play — method?</div>
+        <div class="answer"><strong>A:</strong> <strong>Naturalistic observation</strong>.</div>
+    </div>
+    <div class="qa-block">
+        <div class="question">Q11: Why use quasi‑experimental design?</div>
+        <div class="answer"><strong>A:</strong> When random assignment is impossible or unethical (e.g., comparing maltreated vs. non‑maltreated).</div>
+    </div>
+    <div class="qa-block">
+        <div class="question">Q12: Cohort effects problematic in which design?</div>
+        <div class="answer"><strong>A:</strong> <strong>Cross‑sectional studies</strong> — differences might be generational, not developmental.</div>
+    </div>
+    <div class="qa-block">
+        <div class="question">Q13: Which design MEASURES cohort effects?</div>
+        <div class="answer"><strong>A:</strong> <strong>Cross‑sequential</strong> (sequential design) — multiple cohorts followed over time.</div>
+    </div>
+    <div class="qa-block">
+        <div class="question">Q14: Present in TRUE experiment, not necessarily quasi‑experiment?</div>
+        <div class="answer"><strong>A:</strong> <strong>Random assignment</strong> to groups.</div>
+    </div>
+    <div class="qa-block">
+        <div class="question">Q15: Test for friendliness actually measures friendliness — which validity?</div>
+        <div class="answer"><strong>A:</strong> <strong>Construct validity</strong>.</div>
+    </div>
+    <div class="qa-block">
+        <div class="question">Q16: Lab jumping skill predicts basketball court jumping — which validity?</div>
+        <div class="answer"><strong>A:</strong> <strong>External validity</strong> (specifically ecological validity).</div>
+    </div>
+    <div class="qa-block">
+        <div class="question">Q17: Certain that manipulation caused result — which validity?</div>
+        <div class="answer"><strong>A:</strong> <strong>Internal validity</strong>.</div>
+    </div>
+
+    <h4>📊 CH 1 · KEY TERMS TABLE (condensed)</h4>
+    <table>
+        <tr><th>Term</th><th>Definition</th></tr>
+        <tr><td>Tabula Rasa</td><td>Blank slate; Locke/Aristotle</td></tr>
+        <tr><td>Longitudinal</td><td>Same people, multiple times</td></tr>
+        <tr><td>Cross‑sectional</td><td>Different ages, one time; cohort effects</td></tr>
+        <tr><td>Cross‑sequential</td><td>Multiple cohorts followed; measures cohort effects</td></tr>
+        <tr><td>Inter‑rater reliability</td><td>Agreement between independent observers</td></tr>
+        <tr><td>Internal validity</td><td>Causation (IV → DV)</td></tr>
+        <tr><td>External validity</td><td>Generalizability</td></tr>
+        <tr><td>Construct validity</td><td>Measures intended construct</td></tr>
+        <tr><td>Ecological validity</td><td>Predicts real‑world behavior</td></tr>
+    </table>
+
+    <!-- ============ CHAPTER 2 ============ -->
+    <h2 id="ch2">CHAPTER 2: PRENATAL DEVELOPMENT & INFANCY</h2>
+    
+    <div class="qa-block"><span class="question">Q1: Cell division producing germ cells?</span><br><span class="answer"><strong>A:</strong> Meiosis.</span></div>
+    <div class="qa-block"><span class="question">Q2: Most sensitive prenatal period?</span><br><span class="answer"><strong>A:</strong> Embryonic period (weeks 3‑8) — organogenesis.</span></div>
+    <div class="qa-block"><span class="question">Q3: REM sleep and age relationship?</span><br><span class="answer"><strong>A:</strong> Inverse: newborns ~50% REM, adults ~20%.</span></div>
+    <div class="qa-block"><span class="question">Q4: Newborn auditory preferences from prenatal experience?</span><br><span class="answer"><strong>A:</strong> Mother’s voice, native language, stories read aloud last trimester, familiar rhythms.</span></div>
+    <div class="qa-block"><span class="question">Q5: When are teratogens most dangerous?</span><br><span class="answer"><strong>A:</strong> Embryonic period (3‑8 weeks); each organ has specific critical window.</span></div>
+    <div class="qa-block"><span class="question">Q6: How does fetus get exposed to tastes?</span><br><span class="answer"><strong>A:</strong> Amniotic fluid carries flavors from mother’s diet; fetus swallows fluid.</span></div>
+    <div class="qa-block"><span class="question">Q7: True statement about infant cries?</span><br><span class="answer"><strong>A:</strong> Peak intensity ~6 weeks, decrease by 3‑4 months; individual cry signatures; different types (hunger, pain).</span></div>
+    <div class="qa-block"><span class="question">Q8: Infant gets bored with stimulus — phenomenon?</span><br><span class="answer"><strong>A:</strong> Habituation.</span></div>
+    <div class="qa-block"><span class="question">Q9: Best pattern for responding to newborn crying?</span><br><span class="answer"><strong>A:</strong> Prompt, consistent responding → less crying long‑term, secure attachment.</span></div>
+    <div class="qa-block"><span class="question">Q10: Colic associated with issues in which system?</span><br><span class="answer"><strong>A:</strong> Digestive system (reflux, gas, gut microbiome).</span></div>
+    <div class="qa-block"><span class="question">Q11: Cephalocaudal development means?</span><br><span class="answer"><strong>A:</strong> Growth proceeds from head downward.</span></div>
+    <div class="qa-block"><span class="question">Q12: REM sleep helps visual system develop — theory?</span><br><span class="answer"><strong>A:</strong> Self‑stimulation (autostimulation) theory.</span></div>
+
+    <h4>📅 PRENATAL TIMELINE (sensitive periods)</h4>
+    <table>
+        <tr><th>Period</th><th>Timing</th><th>Key events</th><th>Teratogen risk</th></tr>
+        <tr><td>Germinal</td><td>Weeks 1‑2</td><td>Implantation</td><td>Low (all‑or‑none)</td></tr>
+        <tr><td><strong>Embryonic</strong></td><td><strong>Weeks 3‑8</strong></td><td><strong>Organogenesis; MOST SENSITIVE</strong></td><td><strong>EXTREME</strong></td></tr>
+        <tr><td>Fetal</td><td>Weeks 9‑38</td><td>Growth, refinement</td><td>Moderate (functional)</td></tr>
+    </table>
+
+    <!-- ============ CHAPTER 3 ============ -->
+    <h2 id="ch3">CHAPTER 3: GENETICS, HEREDITY & NEURODEVELOPMENT</h2>
+
+    <div class="qa-block"><span class="question">Q1: Norm of reaction?</span><br><span class="answer"><strong>A:</strong> Range of possible phenotypes from a single genotype across environments.</span></div>
+    <div class="qa-block"><span class="question">Q2: Heterozygous for curly hair means?</span><br><span class="answer"><strong>A:</strong> Two different alleles (one curly, one straight).</span></div>
+    <div class="qa-block"><span class="question">Q3: Approximate heritability of IQ?</span><br><span class="answer"><strong>A:</strong> ~50% (0.50), increases with age.</span></div>
+    <div class="qa-block"><span class="question">Q4: Cat raised in small cage, few toys — brain development?</span><br><span class="answer"><strong>A:</strong> Reduced synaptic density, dendritic branching, cortical thickness; visual & social deficits.</span></div>
+    <div class="qa-block"><span class="question">Q5: Factors ruled OUT as cause of autism rise?</span><br><span class="answer"><strong>A:</strong> Vaccines (MMR) and parenting style — completely discredited.</span></div>
+    <div class="qa-block"><span class="question">Q6: Identical twin correlation > fraternal twin correlation — conclusion?</span><br><span class="answer"><strong>A:</strong> Significant genetic component for that trait.</span></div>
+    <div class="qa-block"><span class="question">Q7: Myelin sheath important for?</span><br><span class="answer"><strong>A:</strong> Speed and efficiency of neural transmission.</span></div>
+    <div class="qa-block"><span class="question">Q8: Genetic material a person inherits?</span><br><span class="answer"><strong>A:</strong> Genotype.</span></div>
+    <div class="qa-block"><span class="question">Q9: Visual cortex synapses vs prefrontal cortex — timing?</span><br><span class="answer"><strong>A:</strong> Visual cortex peaks earlier (4‑8 months); prefrontal cortex peaks in adolescence.</span></div>
+    <div class="qa-block"><span class="question">Q10: Correct interpretation of heritability estimate?</span><br><span class="answer"><strong>A:</strong> Proportion of <em>variance</em> in a trait within a specific population, at a specific time, due to genetic differences. (NOT individual, NOT fixed).</span></div>
+    <div class="qa-block"><span class="question">Q11: Trait gotten from parents — heritable or inherited?</span><br><span class="answer"><strong>A:</strong> Inherited (passed down), but you cannot tell if heritable (could be environmental).</span></div>
+    <div class="qa-block"><span class="question">Q12: Sharing household makes people similar — called?</span><br><span class="answer"><strong>A:</strong> Shared environment effects.</span></div>
+    <div class="qa-block"><span class="question">Q13: Genes produce trait via reliably present environment — concept?</span><br><span class="answer"><strong>A:</strong> Canalized development.</span></div>
+    <div class="qa-block"><span class="question">Q14: Genes × environment → final outcome = ?</span><br><span class="answer"><strong>A:</strong> Phenotype.</span></div>
+
+    <h4>🧬 HERITABILITY — what it DOES and DOES NOT mean</h4>
+    <div style="background: #fef0e6; padding: 1rem 2rem; border-radius: 20px;">
+        <p style="font-weight: 800; color: #a14300;">✅ DOES mean: Proportion of POPULATION variance due to genetic differences.</p>
+        <p style="font-weight: 800; color: #a12f2f;">❌ Does NOT mean: % of YOUR trait from genes; NOT immutable; NOT group differences; NOT individual.</p>
+    </div>
+
+    <!-- ============ CHAPTER 4 ============ -->
+    <h2 id="ch4">CHAPTER 4: COGNITIVE DEVELOPMENT</h2>
+    
+    <div class="qa-block"><span class="question">Q1: Child perceives world solely from own view — Piaget?</span><br><span class="answer"><strong>A:</strong> Egocentrism; preoperational stage.</span></div>
+    <div class="qa-block"><span class="question">Q2: Task analysis — what is included / NOT included?</span><br><span class="answer"><strong>A:</strong> INCLUDES: goals, problem states, strategies, prerequisites. NOT: emotions, personality, social relationships.</span></div>
+    <div class="qa-block"><span class="question">Q3: When does joint attention develop?</span><br><span class="answer"><strong>A:</strong> 9‑12 months.</span></div>
+    <div class="qa-block"><span class="question">Q4: What is assimilation?</span><br><span class="answer"><strong>A:</strong> Interpreting new experiences using existing schemas — NO schema change.</span></div>
+    <div class="qa-block"><span class="question">Q5: Innate knowledge in evolutionarily important areas — which theories?</span><br><span class="answer"><strong>A:</strong> Core knowledge theories (Spelke, Baillargeon).</span></div>
+    <div class="qa-block"><span class="question">Q6: Autism & difficulty with own vs others' mind — core knowledge perspective?</span><br><span class="answer"><strong>A:</strong> Theory of Mind module dysfunction.</span></div>
+    <div class="qa-block"><span class="question">Q7: Characteristics of sensorimotor stage?</span><br><span class="answer"><strong>A:</strong> Learning via senses/actions; object permanence develops; reflexes → goal‑directed; end: symbolic thought.</span></div>
+    <div class="qa-block"><span class="question">Q8: Bob: thought = internalized speech — similar to which theorist?</span><br><span class="answer"><strong>A:</strong> Vygotsky.</span></div>
+    <div class="qa-block"><span class="question">Q9: Skinner/Locke description of infants?</span><br><span class="answer"><strong>A:</strong> Passive recipients; blank slate; shaped entirely by reinforcement.</span></div>
+    <div class="qa-block"><span class="question">Q10: Continuous development, domain‑general, strategy addition — which theories?</span><br><span class="answer"><strong>A:</strong> Information processing theories.</span></div>
+    <div class="qa-block"><span class="question">Q11: Experiences cause change to new operational structure — Piaget concept?</span><br><span class="answer"><strong>A:</strong> Accommodation.</span></div>
+    <div class="qa-block"><span class="question">Q12: Chad: Play‑Doh ball → snake, insists there's MORE — Piaget stage?</span><br><span class="answer"><strong>A:</strong> Preoperational (fails conservation; centration on length).</span></div>
+    <div class="qa-block"><span class="question">Q13: Focus only on one aspect (height, not width) — called?</span><br><span class="answer"><strong>A:</strong> Centration.</span></div>
+
+    <h4>🧩 PIAGET'S STAGES — QUICK VIEW</h4>
+    <table>
+        <tr><th>Stage</th><th>Age</th><th>Key achievements / limitations</th></tr>
+        <tr><td>Sensorimotor</td><td>0‑2 yr</td><td>Object permanence; circular reactions; end of stage = symbols</td></tr>
+        <tr><td>Preoperational</td><td>2‑7 yr</td><td>Egocentrism, centration, NO conservation (Play‑Doh error)</td></tr>
+        <tr><td>Concrete operational</td><td>7‑11 yr</td><td>Conservation, reversibility, decentration</td></tr>
+        <tr><td>Formal operational</td><td>12+ yr</td><td>Abstract logic, hypothetical reasoning</td></tr>
+    </table>
+
+    <!-- ============ CROSS‑CHAPTER INTEGRATION ============ -->
+    <h2 id="integration" style="border-left-color: #7b2c3f;">⚡ CROSS‑CHAPTER INTEGRATION</h2>
+    
+    <h3>📋 THEORIST COMPARISON MATRIX</h3>
+    <table>
+        <tr><th>Theorist</th><th>Core view</th><th>Development mechanism</th><th>Stages?</th></tr>
+        <tr><td>Piaget</td><td>Constructivist</td><td>Assimilation/accommodation</td><td>YES (4)</td></tr>
+        <tr><td>Vygotsky</td><td>Sociocultural</td><td>Internalized speech</td><td>NO</td></tr>
+        <tr><td>Skinner</td><td>Behaviorist</td><td>Operant conditioning</td><td>NO</td></tr>
+        <tr><td>Core knowledge</td><td>Nativist / modular</td><td>Innate domain‑specific modules</td><td>NO</td></tr>
+        <tr><td>Information processing</td><td>Mechanist</td><td>Strategy acquisition, capacity</td><td>NO</td></tr>
+    </table>
+
+    <h3>📅 DEVELOPMENTAL MILESTONES (all chapters)</h3>
+    <table>
+        <tr><th>Age</th><th>Milestone</th><th>Chapter</th></tr>
+        <tr><td>3‑8 weeks prenatal</td><td>Embryonic period; MOST sensitive</td><td>2</td></tr>
+        <tr><td>Birth</td><td>50% REM sleep</td><td>2</td></tr>
+        <tr><td>4‑8 months</td><td>Visual cortex synapse peak</td><td>3</td></tr>
+        <tr><td>9‑12 months</td><td>Joint attention</td><td>4</td></tr>
+        <tr><td>2‑7 years</td><td>Preoperational stage (egocentrism, centration)</td><td>4</td></tr>
+        <tr><td>7‑11 years</td><td>Concrete operational (conservation)</td><td>4</td></tr>
+        <tr><td>Adolescence</td><td>Prefrontal synapse peak</td><td>3</td></tr>
+    </table>
+
+    <!-- ============ EXAM TRAPS ============ -->
+    <h2 id="traps" style="border-left-color: #b13b3b;">⚠️ COMMON EXAM TRAPS & MISCONCEPTIONS</h2>
+    <div class="trap-box">
+        <ul style="list-style-type: '❌ '; line-height: 1.8;">
+            <li><strong>Heritability:</strong> “50% of my intelligence comes from genes” → FALSE. Heritability is POPULATION variance, not individual.</li>
+            <li><strong>Inherited vs heritable:</strong> “Runs in families = genetic” → FALSE. Families share environments too.</li>
+            <li><strong>Assimilation vs accommodation:</strong> using interchangeably → assimilation = no schema change; accommodation = change.</li>
+            <li><strong>Cross‑sectional vs longitudinal:</strong> cross = cohort effects; longitudinal = attrition/practice effects.</li>
+            <li><strong>Piaget stage errors:</strong> object permanence develops in sensorimotor, NOT preoperational.</li>
+            <li><strong>Teratogen timing:</strong> embryonic (3‑8 wks) = most dangerous, not whole pregnancy.</li>
+            <li><strong>Autism causes:</strong> vaccines & parenting → RULED OUT. (genetics strong).</li>
+            <li><strong>Validity mix‑up:</strong> internal = causation; external = generalization; construct = measures construct.</li>
+        </ul>
+    </div>
+
+    <!-- ============ QUICK REFERENCE SHEETS ============ -->
+    <h2 id="quickref">📇 QUICK REFERENCE SHEETS — EACH CHAPTER</h2>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+        <div style="background: #e3edf2; border-radius: 24px; padding: 1.5rem;">
+            <h4 style="margin-top: 0;">🔬 CH 1 cheat</h4>
+            <ul>
+                <li><strong>Plato</strong> – reasoning + self‑control</li>
+                <li><strong>Locke/Aristotle</strong> – tabula rasa</li>
+                <li><strong>Longitudinal</strong> – same Ss, many times</li>
+                <li><strong>Cross‑sectional</strong> – cohort effects!</li>
+                <li><strong>Cross‑sequential</strong> – measures cohort</li>
+                <li><strong>Internal validity</strong> – causation</li>
+            </ul>
+        </div>
+        <div style="background: #faedcd; border-radius: 24px; padding: 1.5rem;">
+            <h4 style="margin-top: 0;">👶 CH 2 cheat</h4>
+            <ul>
+                <li><strong>Embryonic</strong> = most sensitive</li>
+                <li><strong>Meiosis</strong> = germ cells</li>
+                <li><strong>REM ↓</strong> with age; 50% newborn</li>
+                <li><strong>Auditory pref</strong>: mother, native lang</li>
+                <li><strong>Habituation</strong> = boredom</li>
+                <li><strong>Respond</strong>: prompt & consistent</li>
+            </ul>
+        </div>
+        <div style="background: #e6d7ff; border-radius: 24px; padding: 1.5rem;">
+            <h4 style="margin-top: 0;">🧬 CH 3 cheat</h4>
+            <ul>
+                <li><strong>Genotype</strong> – inherited</li>
+                <li><strong>Phenotype</strong> – expressed (G×E)</li>
+                <li><strong>Heritability</strong> = variance statistic</li>
+                <li><strong>Norm of reaction</strong> – range of outcomes</li>
+                <li><strong>Canalization</strong> – buffered</li>
+                <li><strong>Vaccines ❌ cause autism</strong></li>
+            </ul>
+        </div>
+        <div style="background: #d6f0e0; border-radius: 24px; padding: 1.5rem;">
+            <h4 style="margin-top: 0;">🧠 CH 4 cheat</h4>
+            <ul>
+                <li><strong>Assimilation</strong> – no change</li>
+                <li><strong>Accommodation</strong> – schema change</li>
+                <li><strong>Egocentrism, centration</strong> – preoperational</li>
+                <li><strong>Joint attention</strong> – 9‑12 mo</li>
+                <li><strong>Vygotsky</strong> – internalized speech</li>
+                <li><strong
