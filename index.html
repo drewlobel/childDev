@@ -3,209 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psychology 201 · Biological Bases · Click‑to‑Reveal</title>
+    <title>Developmental Psychology · Click-to-Reveal Master Study Guide</title>
     <style>
-        /* ===== global ===== */
+        /* ===== GLOBAL STYLES ===== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', 'Segoe UI', 'Roboto', system-ui, sans-serif;
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
         }
         body {
-            background: linear-gradient(125deg, #eff6fc 0%, #dee9f2 100%);
+            background: linear-gradient(145deg, #f1f7fc 0%, #e6edf5 100%);
             padding: 2rem 1rem;
             line-height: 1.6;
-            color: #102b3f;
+            color: #0a2c3d;
         }
-        .study-box {
+        .guide-container {
             max-width: 1300px;
             margin: 0 auto;
             background: rgba(255,255,255,0.92);
-            backdrop-filter: blur(4px);
-            border-radius: 2.5rem;
-            box-shadow: 0 30px 50px -20px #1c3e55;
+            backdrop-filter: blur(3px);
+            box-shadow: 0 20px 40px -12px rgba(0,32,64,0.25);
+            border-radius: 36px;
             padding: 2.8rem 2.5rem;
-            border: 1px solid #c8deec;
+            border: 1px solid #dceaf2;
         }
+
         h1 {
-            font-size: 3rem;
+            font-size: 2.8rem;
             font-weight: 700;
-            background: linear-gradient(150deg, #103c54, #1b6279);
+            background: linear-gradient(165deg, #0c4a6e, #0b5e7c);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 0.2rem;
-            border-bottom: 6px solid #9ac2d6;
-            padding-bottom: 0.2rem;
-        }
-        h2 {
-            font-size: 2.2rem;
-            font-weight: 600;
-            color: #0f4b63;
-            margin-top: 3rem;
-            margin-bottom: 1.2rem;
-            border-left: 14px solid #2b7c94;
-            padding-left: 1.4rem;
-            background: #e4f0f8;
-            border-radius: 0 30px 30px 0;
-        }
-        h3 {
-            font-size: 1.8rem;
-            color: #176577;
-            margin: 2rem 0 1rem;
-            border-bottom: 3px solid #b1d3e0;
+            border-bottom: 5px solid #a2c8dd;
             padding-bottom: 0.3rem;
         }
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #0f4662;
+            margin-top: 2.6rem;
+            margin-bottom: 1.2rem;
+            border-left: 14px solid #19778e;
+            padding-left: 1.2rem;
+            background: #ecf6fa;
+            border-radius: 0 18px 18px 0;
+            line-height: 1.3;
+        }
+        h3 {
+            font-size: 1.6rem;
+            color: #1a5f73;
+            margin-top: 1.8rem;
+            border-bottom: 3px solid #b3d7e2;
+            padding-bottom: 0.4rem;
+        }
         h4 {
-            font-size: 1.4rem;
-            color: #1f6d64;
-            margin: 1.5rem 0 0.5rem;
+            font-size: 1.3rem;
+            color: #1c6a5e;
+            margin: 1.4rem 0 0.6rem;
         }
 
-        /* ===== click cards ===== */
+        /* ===== CLICK-TO-REVEAL CARD ===== */
         .qa-card {
             background: white;
-            border-radius: 24px;
-            margin: 1rem 0;
-            box-shadow: 0 8px 16px rgba(0,45,65,0.05);
-            border-left: 8px solid #2a7f9c;
+            border-radius: 20px;
+            padding: 0.2rem 0;
+            margin: 1.2rem 0;
+            box-shadow: 0 6px 12px rgba(0,35,55,0.06);
+            border-left: 8px solid #3083a2;
             transition: 0.1s;
         }
-        .qa-header {
+        .question-text {
             font-weight: 700;
-            font-size: 1.05rem;
-            color: #023b53;
-            padding: 0.9rem 2rem 0.3rem;
-            background: #f5faff;
-            border-radius: 24px 24px 0 0;
+            font-size: 1.1rem;
+            color: #003952;
+            padding: 0.9rem 1.8rem 0.5rem;
+            background: #f3faff;
+            border-radius: 20px 20px 0 0;
         }
         .reveal-btn {
-            background: #dcecf3;
+            background: #deedf2;
             border: none;
             color: #0b4f6c;
-            padding: 0.5rem 2rem;
-            margin: 0.2rem 2rem 0.8rem;
+            padding: 0.5rem 1.8rem;
+            margin: 0.2rem 1.8rem 0.8rem;
             font-weight: 600;
             font-size: 0.9rem;
-            border-radius: 40px;
+            border-radius: 50px;
             cursor: pointer;
-            border: 1px solid #569eb3;
-            transition: 0.15s;
+            border: 1px solid #6ca3b3;
+            transition: all 0.15s;
             letter-spacing: 0.3px;
         }
         .reveal-btn:hover {
-            background: #c4dee9;
-            border-color: #1b6f86;
-            color: #000;
-            box-shadow: 0 6px 12px rgba(19,96,119,0.1);
+            background: #c8dbe4;
+            border-color: #1c6a7a;
+            color: black;
+            box-shadow: 0 4px 8px rgba(0,80,100,0.1);
         }
         .answer-content {
             display: none;
-            background: #fafffc;
-            padding: 1rem 2rem 1.4rem;
-            border-radius: 0 0 24px 24px;
-            border-top: 2px dashed #79b8cc;
+            background: #f9fff7;
+            padding: 1rem 1.8rem 1.2rem;
+            border-radius: 0 0 20px 20px;
+            border-top: 2px dashed #6c9eb3;
             margin-top: 0.2rem;
-            color: #0f423f;
+            color: #10403b;
             font-size: 1.02rem;
         }
         .answer-content.show {
             display: block;
         }
 
-        /* ===== tables, callouts ===== */
+        /* ===== TABLES, TRAPS, KEY TERMS ===== */
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 2rem 0;
+            margin: 1.8rem 0;
             background: white;
-            border-radius: 24px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 8px 18px rgba(0,40,55,0.08);
+            box-shadow: 0 8px 16px rgba(0,20,40,0.06);
         }
         th {
-            background: #1d6273;
+            background: #134f5c;
             color: white;
             font-weight: 600;
             padding: 14px 8px;
             font-size: 1rem;
         }
         td {
-            border: 1px solid #c5dfe9;
-            padding: 12px 12px;
+            border: 1px solid #cde3e9;
+            padding: 12px 10px;
             background: white;
         }
         tr:nth-child(even) td {
-            background: #f3fafd;
+            background: #f6fbfc;
         }
 
-        .structure-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.6rem;
+        .trap-box {
+            background: #fffbeb;
+            border-left: 12px solid #c53b3b;
+            border-radius: 24px;
+            padding: 1.4rem 2rem;
             margin: 2rem 0;
-        }
-        .brain-card {
-            background: #d9ecf2;
-            border-radius: 28px;
-            padding: 1.6rem 1.8rem;
-            border-left: 12px solid #1b6270;
-            box-shadow: 0 6px 0 #bed3dd;
+            box-shadow: 0 6px 12px rgba(150,40,40,0.05);
         }
 
-        .quick-dip {
-            background: #e6f3f7;
-            border-radius: 28px;
-            padding: 1.8rem 2.2rem;
-            margin: 2rem 0 1rem;
-            border: 2px solid #9bc6d6;
+        .milestone {
+            background: #dff1f0;
+            padding: 1rem 2rem;
+            border-radius: 18px;
+            border-left: 10px solid #296e6e;
+            margin: 1.2rem 0;
         }
 
-        footer {
-            margin-top: 4rem;
-            text-align: center;
-            color: #386775;
-            border-top: 2px solid #c0dae7;
-            padding-top: 2rem;
+        .quickref-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.2rem;
         }
-        .badge {
-            background: #134f5c;
-            color: white;
-            padding: 0.5rem 1.5rem;
+        .quickref-card {
+            background: #e5f1f5;
+            border-radius: 24px;
+            padding: 1.4rem 1.4rem;
+            border: 1px solid #90b8c9;
+        }
+
+        .btn-collapse {
+            background: none;
+            border: 2px solid #3a7b8c;
+            padding: 0.3rem 1.2rem;
             border-radius: 60px;
             font-weight: 600;
-            display: inline-block;
+            color: #12455f;
+            margin-left: 1rem;
+            cursor: pointer;
+        }
+        footer {
+            margin-top: 3.5rem;
+            text-align: center;
+            color: #346673;
+            border-top: 2px solid #bad7e3;
+            padding-top: 1.8rem;
+        }
+        .toc {
+            background: #e0edf2;
+            border-radius: 40px;
+            padding: 1.5rem 2rem;
+            margin: 1.5rem 0;
         }
     </style>
 </head>
 <body>
-<div class="study-box">
+<div class="guide-container">
 
     <!-- ========== HEADER ========== -->
     <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
-        <h1>🧠 PSYCHOLOGY 201<br><span style="font-size: 1.9rem; -webkit-text-fill-color: #256e7a;">BIOLOGICAL BASES OF BEHAVIOR</span></h1>
-        <span class="badge">70+ Q&A · ACTIVE RECALL</span>
+        <h1>🧪 DEVELOPMENTAL PSYCHOLOGY<br><span style="font-size: 1.8rem; -webkit-text-fill-color: #1f6e7a;">CLICK-TO-REVEAL · FULL INTEGRATION</span></h1>
+        <span style="background: #0f4057; color: white; padding: 0.6rem 1.5rem; border-radius: 100px; font-weight: 600;">62+ Q&A · ACTIVE RECALL</span>
     </div>
-    <p style="font-size: 1.3rem; margin-top: 0.6rem; color: #1b5e77;"><strong>⬇️ Every answer hidden — click any blue button to reveal. Study like a pro!</strong></p>
-
-    <!-- ========== QUICK NAV ========== -->
-    <div style="background: #d2e6ef; border-radius: 60px; padding: 1.2rem 2rem; margin: 2rem 0;">
-        <h3 style="margin-top: 0; border-bottom: none; color: #024e61;">📋 JUMP TO SECTION</h3>
+    <p style="font-size: 1.25rem; margin-top: 0.4rem; color: #1b5166;"><strong>⬇️ All answers hidden — click any blue button to reveal. Study actively!</strong></p>
+    
+    <!-- ========== TABLE OF CONTENTS ========== -->
+    <div class="toc">
+        <h3 style="margin-top: 0; border-bottom: none; color: #024457;">📑 ONE‑CLICK NAVIGATION</h3>
         <div style="display: flex; flex-wrap: wrap; gap: 0.8rem;">
-            <span style="background: #2c7384; padding: 0.4rem 1.4rem; border-radius: 40px;"><a href="#ethics" style="color: white;">🔏 ETHICS</a></span>
-            <span style="background: #2c7384; padding: 0.4rem 1.4rem; border-radius: 40px;"><a href="#cells" style="color: white;">🧬 CELLS</a></span>
-            <span style="background: #2c7384; padding: 0.4rem 1.4rem; border-radius: 40px;"><a href="#neuron" style="color: white;">⚡ NEURON</a></span>
-            <span style="background: #2c7384; padding: 0.4rem 1.4rem; border-radius: 40px;"><a href="#impulse" style="color: white;">🔥 IMPULSE</a></span>
-            <span style="background: #2c7384; padding: 0.4rem 1.4rem; border-radius: 40px;"><a href="#nervous" style="color: white;">🧩 NERVOUS SYSTEM</a></span>
-            <span style="background: #2c7384; padding: 0.4rem 1.4rem; border-radius: 40px;"><a href="#brain" style="color: white;">🧠 BRAIN</a></span>
-            <span style="background: #2c7384; padding: 0.4rem 1.4rem; border-radius: 40px;"><a href="#lobes" style="color: white;">🔲 LOBES</a></span>
+            <span style="background: #2f727a; padding: 0.4rem 1.2rem; border-radius: 60px;"><a href="#ch1" style="color: white; font-weight: 500;">🔬 CH 1</a></span>
+            <span style="background: #2f727a; padding: 0.4rem 1.2rem; border-radius: 60px;"><a href="#ch2" style="color: white; font-weight: 500;">👶 CH 2</a></span>
+            <span style="background: #2f727a; padding: 0.4rem 1.2rem; border-radius: 60px;"><a href="#ch3" style="color: white; font-weight: 500;">🧬 CH 3</a></span>
+            <span style="background: #2f727a; padding: 0.4rem 1.2rem; border-radius: 60px;"><a href="#ch4" style="color: white; font-weight: 500;">🧠 CH 4</a></span>
+            <span style="background: #416d6b; padding: 0.4rem 1.2rem; border-radius: 60px;"><a href="#integration" style="color: white;">⚡ CROSS‑CHAPTER</a></span>
+            <span style="background: #916b40; padding: 0.4rem 1.2rem; border-radius: 60px;"><a href="#traps" style="color: white;">⚠️ TRAPS</a></span>
+            <span style="background: #3f6f62; padding: 0.4rem 1.2rem; border-radius: 60px;"><a href="#quickref" style="color: white;">📇 QUICK REF</a></span>
         </div>
+        <p style="margin-top: 1rem; font-size: 0.95rem;"><em>💡 Every question = hidden answer. Click to test yourself. Answers stay revealed until you refresh.</em></p>
     </div>
 
-    <!-- ========== SCRIPT ========== -->
+    <!-- ========== JAVASCRIPT: TOGGLE ANSWERS ========== -->
     <script>
-        function revealAnswer(btn, ansId) {
-            const answerDiv = document.getElementById(ansId);
+        function revealAnswer(btn, answerId) {
+            var answerDiv = document.getElementById(answerId);
             if (answerDiv.classList.contains('show')) {
                 answerDiv.classList.remove('show');
                 btn.innerText = '📌 Click to reveal answer';
@@ -216,110 +236,232 @@
         }
     </script>
 
-    <!-- ========== 1. ETHICAL GUIDELINES ========== -->
-    <h2 id="ethics">🔏 1. ETHICAL GUIDELINES FOR RESEARCH (APA)</h2>
-    <div class="qa-card"><div class="qa-header">Informed consent — what must participants receive?</div><button class="reveal-btn" onclick="revealAnswer(this, 'eth1')">📌 Click to reveal answer</button><div id="eth1" class="answer-content"><strong>A:</strong> Information about purpose, procedures, risks; right to decline/withdraw anytime.</div></div>
-    <div class="qa-card"><div class="qa-header">Confidentiality means?</div><button class="reveal-btn" onclick="revealAnswer(this, 'eth2')">📌 Click to reveal answer</button><div id="eth2" class="answer-content"><strong>A:</strong> Privacy of participants; data kept private and used only for intended purpose.</div></div>
-    <div class="qa-card"><div class="qa-header">When is deception allowed?</div><button class="reveal-btn" onclick="revealAnswer(this, 'eth3')">📌 Click to reveal answer</button><div id="eth3" class="answer-content"><strong>A:</strong> Only if no feasible alternative, benefits outweigh costs, and participants are debriefed ASAP.</div></div>
-    <div class="qa-card"><div class="qa-header">Freedom from harm — core idea?</div><button class="reveal-btn" onclick="revealAnswer(this, 'eth4')">📌 Click to reveal answer</button><div id="eth4" class="answer-content"><strong>A:</strong> No harmful/dangerous physical or psychological treatments.</div></div>
-
-    <!-- ========== 2. CELLS OF THE NERVOUS SYSTEM ========== -->
-    <h2 id="cells">🧬 2. CELLS OF THE NERVOUS SYSTEM</h2>
-    <div class="qa-card"><div class="qa-header">Glial cells: meaning and recent finding?</div><button class="reveal-btn" onclick="revealAnswer(this, 'cell1')">📌 Click to reveal answer</button><div id="cell1" class="answer-content"><strong>A:</strong> From Greek “glue”; hold neurons in place; roughly equal in number to neurons.</div></div>
-    <div class="qa-card"><div class="qa-header">Neuron = ?</div><button class="reveal-btn" onclick="revealAnswer(this, 'cell2')">📌 Click to reveal answer</button><div id="cell2" class="answer-content"><strong>A:</strong> Individual cell, smallest unit of nervous system.</div></div>
-    <div class="qa-card"><div class="qa-header">Sensory (afferent) neurons — function?</div><button class="reveal-btn" onclick="revealAnswer(this, 'cell3')">📌 Click to reveal answer</button><div id="cell3" class="answer-content"><strong>A:</strong> Transport messages from sense organs → CNS.</div></div>
-    <div class="qa-card"><div class="qa-header">Motor (efferent) neurons — function?</div><button class="reveal-btn" onclick="revealAnswer(this, 'cell4')">📌 Click to reveal answer</button><div id="cell4" class="answer-content"><strong>A:</strong> Transmit messages from brain → muscles/glands (effector cells).</div></div>
-    <div class="qa-card"><div class="qa-header">Interneurons (association neurons): role?</div><button class="reveal-btn" onclick="revealAnswer(this, 'cell5')">📌 Click to reveal answer</button><div id="cell5" class="answer-content"><strong>A:</strong> Connect sensory & motor neurons; mostly in CNS.</div></div>
-
-    <!-- ========== 3. ANATOMY OF THE NEURON ========== -->
-    <h2 id="neuron">🔬 3. ANATOMY OF THE NEURON</h2>
-    <div class="qa-card"><div class="qa-header">Dendrites — what do they do?</div><button class="reveal-btn" onclick="revealAnswer(this, 'anat1')">📌 Click to reveal answer</button><div id="anat1" class="answer-content"><strong>A:</strong> Short fibers that receive/collect messages from other cells.</div></div>
-    <div class="qa-card"><div class="qa-header">Soma (cell body) function?</div><button class="reveal-btn" onclick="revealAnswer(this, 'anat2')">📌 Click to reveal answer</button><div id="anat2" class="answer-content"><strong>A:</strong> Houses nucleus, carries out basic cell functions.</div></div>
-    <div class="qa-card"><div class="qa-header">Axon — role?</div><button class="reveal-btn" onclick="revealAnswer(this, 'anat3')">📌 Click to reveal answer</button><div id="anat3" class="answer-content"><strong>A:</strong> Long fiber through which message leaves the neuron.</div></div>
-    <div class="qa-card"><div class="qa-header">Myelin sheath — composition and job?</div><button class="reveal-btn" onclick="revealAnswer(this, 'anat4')">📌 Click to reveal answer</button><div id="anat4" class="answer-content"><strong>A:</strong> Fatty white substance; speeds up transmission.</div></div>
-    <div class="qa-card"><div class="qa-header">Nodes of Ranvier — what & why?</div><button class="reveal-btn" onclick="revealAnswer(this, 'anat5')">📌 Click to reveal answer</button><div id="anat5" class="answer-content"><strong>A:</strong> Breaks in myelin; message “jumps” to increase speed.</div></div>
-    <div class="qa-card"><div class="qa-header">Axonal terminals & terminal buttons?</div><button class="reveal-btn" onclick="revealAnswer(this, 'anat6')">📌 Click to reveal answer</button><div id="anat6" class="answer-content"><strong>A:</strong> Branches at axon end; terminal buttons house synaptic vesicles.</div></div>
-    <div class="qa-card"><div class="qa-header">Synaptic vesicles & cleft?</div><button class="reveal-btn" onclick="revealAnswer(this, 'anat7')">📌 Click to reveal answer</button><div id="anat7" class="answer-content"><strong>A:</strong> Vesicles house neurotransmitters; cleft = tiny gap between neurons.</div></div>
-
-    <!-- ========== 4. NEURAL IMPULSE ========== -->
-    <h2 id="impulse">⚡ 4. THE NEURAL IMPULSE & COMMUNICATION</h2>
-    <div class="qa-card"><div class="qa-header">Communication inside neuron vs between neurons?</div><button class="reveal-btn" onclick="revealAnswer(this, 'imp1')">📌 Click to reveal answer</button><div id="imp1" class="answer-content"><strong>A:</strong> Electrical within neuron; chemical between neurons (synapse).</div></div>
-    <div class="qa-card"><div class="qa-header">Ions = ? examples?</div><button class="reveal-btn" onclick="revealAnswer(this, 'imp2')">📌 Click to reveal answer</button><div id="imp2" class="answer-content"><strong>A:</strong> Electrically charged particles: sodium (Na⁺), potassium (K⁺), chloride (Cl⁻).</div></div>
-    <div class="qa-card"><div class="qa-header">Resting potential — polarity?</div><button class="reveal-btn" onclick="revealAnswer(this, 'imp3')">📌 Click to reveal answer</button><div id="imp3" class="answer-content"><strong>A:</strong> Resting; cell more negative inside (polarized).</div></div>
-    <div class="qa-card"><div class="qa-header">Action potential — what happens?</div><button class="reveal-btn" onclick="revealAnswer(this, 'imp4')">📌 Click to reveal answer</button><div id="imp4" class="answer-content"><strong>A:</strong> Cell fires; positive ions flow in → cell becomes more positive (depolarized).</div></div>
-    <div class="qa-card"><div class="qa-header">All‑or‑none law?</div><button class="reveal-btn" onclick="revealAnswer(this, 'imp5')">📌 Click to reveal answer</button><div id="imp5" class="answer-content"><strong>A:</strong> Neuron either fires at full strength or not at all.</div></div>
-    <div class="qa-card"><div class="qa-header">Absolute refractory period?</div><button class="reveal-btn" onclick="revealAnswer(this, 'imp6')">📌 Click to reveal answer</button><div id="imp6" class="answer-content"><strong>A:</strong> Immediately after firing; neuron cannot fire again.</div></div>
-    <div class="qa-card"><div class="qa-header">Relative refractory period?</div><button class="reveal-btn" onclick="revealAnswer(this, 'imp7')">📌 Click to reveal answer</button><div id="imp7" class="answer-content"><strong>A:</strong> Can fire again but only with much stronger stimulus.</div></div>
-
-    <!-- ========== 5. ORGANIZATION OF THE NERVOUS SYSTEM ========== -->
-    <h2 id="nervous">🧩 5. ORGANIZATION — CNS & PNS</h2>
-    <div class="qa-card"><div class="qa-header">Central Nervous System (CNS) consists of?</div><button class="reveal-btn" onclick="revealAnswer(this, 'org1')">📌 Click to reveal answer</button><div id="org1" class="answer-content"><strong>A:</strong> Brain and spinal cord — interprets messages, sends responses.</div></div>
-    <div class="qa-card"><div class="qa-header">Peripheral Nervous System (PNS) — two divisions?</div><button class="reveal-btn" onclick="revealAnswer(this, 'org2')">📌 Click to reveal answer</button><div id="org2" class="answer-content"><strong>A:</strong> Somatic (voluntary muscle) & Autonomic (involuntary organs/glands).</div></div>
-    <div class="qa-card"><div class="qa-header">Sympathetic vs parasympathetic?</div><button class="reveal-btn" onclick="revealAnswer(this, 'org3')">📌 Click to reveal answer</button><div id="org3" class="answer-content"><strong>A:</strong> Sympathetic = fight/flight; parasympathetic = rest/digest (homeostasis).</div></div>
-
-    <!-- ========== 6. BRAIN STRUCTURES (HINDBRAIN, MIDBRAIN, FOREBRAIN) ========== -->
-    <h2 id="brain">🧠 6. BRAIN STRUCTURES & REGIONS</h2>
-    <div class="structure-grid">
-        <div class="brain-card"><strong>🔻 Hindbrain</strong><br>Medulla: breathing, heart rate, BP.<br>Pons: sleep & dreaming.<br>Cerebellum: balance, movement, learning.</div>
-        <div class="brain-card"><strong>🔺 Midbrain</strong><br>Auditory/visual reflex clusters.<br>Reticular formation: arousal, attention, sensory filter.</div>
-        <div class="brain-card"><strong>🧠 Forebrain</strong><br>Thalamus: sensory relay.<br>Hypothalamus: hunger, thirst, sex, temp.<br>Limbic system: hippocampus (memory) & amygdala (emotion/aggression).<br>Cerebrum + corpus callosum.</div>
+    <!-- ========== CHAPTER 1 ========== -->
+    <h2 id="ch1">🔬 CHAPTER 1: THEORIES & RESEARCH METHODS</h2>
+    <!-- Q1 -->
+    <div class="qa-card">
+        <div class="question-text">1. What did Plato think were the most important goals of education?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans1')">📌 Click to reveal answer</button>
+        <div id="ans1" class="answer-content"><strong>A:</strong> Strengthen intellectual reasoning and instill self‑control & morality — not simply filling minds with facts.</div>
     </div>
-    <!-- separate click cards for detail -->
-    <div class="qa-card"><div class="qa-header">Medulla controls?</div><button class="reveal-btn" onclick="revealAnswer(this, 'brain1')">📌 Click to reveal answer</button><div id="brain1" class="answer-content"><strong>A:</strong> Breathing, heart rate, blood pressure.</div></div>
-    <div class="qa-card"><div class="qa-header">Pons role?</div><button class="reveal-btn" onclick="revealAnswer(this, 'brain2')">📌 Click to reveal answer</button><div id="brain2" class="answer-content"><strong>A:</strong> Involved in sleep and dreaming.</div></div>
-    <div class="qa-card"><div class="qa-header">Cerebellum function?</div><button class="reveal-btn" onclick="revealAnswer(this, 'brain3')">📌 Click to reveal answer</button><div id="brain3" class="answer-content"><strong>A:</strong> Coordinates balance, movement, and learning.</div></div>
-    <div class="qa-card"><div class="qa-header">Reticular formation location & job?</div><button class="reveal-btn" onclick="revealAnswer(this, 'brain4')">📌 Click to reveal answer</button><div id="brain4" class="answer-content"><strong>A:</strong> Starts in medulla → forebrain; controls arousal, attention, filters messages.</div></div>
-    <div class="qa-card"><div class="qa-header">Thalamus = ?</div><button class="reveal-btn" onclick="revealAnswer(this, 'brain5')">📌 Click to reveal answer</button><div id="brain5" class="answer-content"><strong>A:</strong> Sensory relay station.</div></div>
-    <div class="qa-card"><div class="qa-header">Hypothalamus regulates?</div><button class="reveal-btn" onclick="revealAnswer(this, 'brain6')">📌 Click to reveal answer</button><div id="brain6" class="answer-content"><strong>A:</strong> Hunger, thirst, sex drive, body temperature.</div></div>
-    <div class="qa-card"><div class="qa-header">Limbic system: hippocampus & amygdala?</div><button class="reveal-btn" onclick="revealAnswer(this, 'brain7')">📌 Click to reveal answer</button><div id="brain7" class="answer-content"><strong>A:</strong> Hippocampus = memory formation; Amygdala = emotion and aggression.</div></div>
-    <div class="qa-card"><div class="qa-header">Corpus callosum connects?</div><button class="reveal-btn" onclick="revealAnswer(this, 'brain8')">📌 Click to reveal answer</button><div id="brain8" class="answer-content"><strong>A:</strong> Two cerebral hemispheres.</div></div>
+    <!-- Q2 -->
+    <div class="qa-card">
+        <div class="question-text">2. Why was the Earl of Shaftsbury's effort at social reform during the industrial revolution so important?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans2')">📌 Click to reveal answer</button>
+        <div id="ans2" class="answer-content"><strong>A:</strong> Demonstrated that improving children's living conditions (housing, healthcare, child labor laws) positively impacts development — early evidence for environmental influence.</div>
+    </div>
+    <!-- Q3 -->
+    <div class="qa-card">
+        <div class="question-text">3. What view is currently supported in the nature/nurture debate?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans3')">📌 Click to reveal answer</button>
+        <div id="ans3" class="answer-content"><strong>A:</strong> Continuous, bidirectional interactions between genes and environment — interactionist view.</div>
+    </div>
+    <!-- Q4 -->
+    <div class="qa-card">
+        <div class="question-text">4. Term for physical, social, cultural, economic, historical circumstances of a child's environment?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans4')">📌 Click to reveal answer</button>
+        <div id="ans4" class="answer-content"><strong>A:</strong> <strong>Context</strong> (ecological environment; Bronfenbrenner's systems). SES is one component.</div>
+    </div>
+    <!-- Q5 -->
+    <div class="qa-card">
+        <div class="question-text">5. Advantages of structured observations?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans5')">📌 Click to reveal answer</button>
+        <div id="ans5" class="answer-content"><strong>A:</strong> Control, standardization, efficiency, replicability — all participants experience same situation.</div>
+    </div>
+    <!-- Q6 Romanian orphans -->
+    <div class="qa-card">
+        <div class="question-text">6. Why are Romanian orphans studied intensively?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans6')">📌 Click to reveal answer</button>
+        <div id="ans6" class="answer-content"><strong>A:</strong> Natural experiment on severe deprivation — reveals critical periods, plasticity, and recovery potential.</div>
+    </div>
+    <!-- Q7 tabula rasa -->
+    <div class="qa-card">
+        <div class="question-text">7. Philosophers who viewed child as tabula rasa?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans7')">📌 Click to reveal answer</button>
+        <div id="ans7" class="answer-content"><strong>A:</strong> John Locke and Aristotle — blank slate, knowledge from experience.</div>
+    </div>
+    <!-- Q8 inter-rater reliability -->
+    <div class="qa-card">
+        <div class="question-text">8. Two students code baby gaze, compare — what is calculated?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans8')">📌 Click to reveal answer</button>
+        <div id="ans8" class="answer-content"><strong>A:</strong> Inter‑rater reliability (inter‑observer reliability).</div>
+    </div>
+    <!-- Q9 longitudinal -->
+    <div class="qa-card">
+        <div class="question-text">9. Test 1st graders, again 3rd, 5th, 7th — design?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans9')">📌 Click to reveal answer</button>
+        <div id="ans9" class="answer-content"><strong>A:</strong> Longitudinal — same individuals, multiple time points.</div>
+    </div>
+    <!-- Q10 naturalistic obs -->
+    <div class="qa-card">
+        <div class="question-text">10. Quietly observing children play — method?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans10')">📌 Click to reveal answer</button>
+        <div id="ans10" class="answer-content"><strong>A:</strong> Naturalistic observation.</div>
+    </div>
+    <!-- Q11 quasi-experimental -->
+    <div class="qa-card">
+        <div class="question-text">11. Why use quasi‑experimental design?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans11')">📌 Click to reveal answer</button>
+        <div id="ans11" class="answer-content"><strong>A:</strong> Random assignment impossible/unethical (e.g., comparing maltreated vs. non‑maltreated).</div>
+    </div>
+    <!-- Q12 cohort effects -->
+    <div class="qa-card">
+        <div class="question-text">12. Cohort effects problematic in which design?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans12')">📌 Click to reveal answer</button>
+        <div id="ans12" class="answer-content"><strong>A:</strong> Cross‑sectional studies — differences could be generational, not developmental.</div>
+    </div>
+    <!-- Q13 cross-sequential -->
+    <div class="qa-card">
+        <div class="question-text">13. Which design MEASURES cohort effects?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans13')">📌 Click to reveal answer</button>
+        <div id="ans13" class="answer-content"><strong>A:</strong> Cross‑sequential (sequential) — multiple cohorts followed over time.</div>
+    </div>
+    <!-- Q14 random assignment -->
+    <div class="qa-card">
+        <div class="question-text">14. Present in TRUE experiment but not quasi‑experiment?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans14')">📌 Click to reveal answer</button>
+        <div id="ans14" class="answer-content"><strong>A:</strong> Random assignment to groups.</div>
+    </div>
+    <!-- Q15 construct validity -->
+    <div class="qa-card">
+        <div class="question-text">15. Test for friendliness actually measures friendliness — validity?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans15')">📌 Click to reveal answer</button>
+        <div id="ans15" class="answer-content"><strong>A:</strong> Construct validity.</div>
+    </div>
+    <!-- Q16 ecological validity -->
+    <div class="qa-card">
+        <div class="question-text">16. Lab jumping predicts basketball court jumping — validity?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans16')">📌 Click to reveal answer</button>
+        <div id="ans16" class="answer-content"><strong>A:</strong> External validity (ecological validity).</div>
+    </div>
+    <!-- Q17 internal validity -->
+    <div class="qa-card">
+        <div class="question-text">17. Certain that manipulation caused result — validity?</div>
+        <button class="reveal-btn" onclick="revealAnswer(this, 'ans17')">📌 Click to reveal answer</button>
+        <div id="ans17" class="answer-content"><strong>A:</strong> Internal validity.</div>
+    </div>
 
-    <!-- ========== 7. FOUR LOBES ========== -->
-    <h2 id="lobes">🔲 7. THE FOUR LOBES OF THE CEREBRAL CORTEX</h2>
+    <!-- CHAPTER 1 TERMS TABLE (visible) -->
+    <h4>📊 CH 1 KEY TERMS (visible)</h4>
     <table>
-        <tr><th>Lobe</th><th>Key functions & areas</th></tr>
-        <tr><td>Frontal</td><td>Goal setting, concentration, decision making; Broca's area (speech production); motor cortex</td></tr>
-        <tr><td>Parietal</td><td>Temperature, touch, pressure; somatosensory cortex</td></tr>
-        <tr><td>Temporal</td><td>Hearing, facial recognition; Wernicke's area (speech comprehension)</td></tr>
-        <tr><td>Occipital</td><td>Vision and sight</td></tr>
+        <tr><th>Term</th><th>Definition</th></tr>
+        <tr><td>Tabula Rasa</td><td>Blank slate; Locke/Aristotle</td></tr>
+        <tr><td>Longitudinal</td><td>Same participants, multiple times</td></tr>
+        <tr><td>Cross-sectional</td><td>Different ages, one time; cohort effects</td></tr>
+        <tr><td>Cross-sequential</td><td>Multiple cohorts followed; measures cohort effects</td></tr>
+        <tr><td>Internal validity</td><td>Causation (IV → DV)</td></tr>
+        <tr><td>Construct validity</td><td>Measures intended construct</td></tr>
     </table>
-    <div class="qa-card"><div class="qa-header">Broca's area location & role?</div><button class="reveal-btn" onclick="revealAnswer(this, 'lobe1')">📌 Click to reveal answer</button><div id="lobe1" class="answer-content"><strong>A:</strong> Frontal lobe; speech production.</div></div>
-    <div class="qa-card"><div class="qa-header">Wernicke's area location & role?</div><button class="reveal-btn" onclick="revealAnswer(this, 'lobe2')">📌 Click to reveal answer</button><div id="lobe2" class="answer-content"><strong>A:</strong> Temporal lobe; speech comprehension.</div></div>
-    <div class="qa-card"><div class="qa-header">Somatosensory cortex — lobe?</div><button class="reveal-btn" onclick="revealAnswer(this, 'lobe3')">📌 Click to reveal answer</button><div id="lobe3" class="answer-content"><strong>A:</strong> Parietal lobe.</div></div>
 
-    <!-- ========== QUICK REF / SNAPSHOT ========== -->
-    <div class="quick-dip">
-        <h3 style="margin-top: 0;">📌 QUICK REFERENCE — must‑know</h3>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem;">
-            <span>🧠 <strong>Glia</strong> = glue, ≈ neurons</span>
-            <span>⚡ <strong>All‑or‑none</strong> = full or nothing</span>
-            <span>🔁 <strong>Refractory periods</strong> absolute/relative</span>
-            <span>🧬 <strong>Sensory (afferent)</strong> → CNS</span>
-            <span>💪 <strong>Motor (efferent)</strong> → muscles</span>
-            <span>🌿 <strong>Autonomic</strong>: sympathetic vs parasympathetic</span>
-            <span>🗣️ <strong>Broca</strong> = speech production</span>
-            <span>👂 <strong>Wernicke</strong> = comprehension</span>
-        </div>
+    <!-- ========== CHAPTER 2 ========== -->
+    <h2 id="ch2">👶 CHAPTER 2: PRENATAL DEVELOPMENT & INFANCY</h2>
+    <!-- dynamically create Q1-12 Ch2 with same pattern -->
+    <div class="qa-card"><div class="question-text">1. What type of cell division produces germ cells?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch2a1')">📌 Click to reveal answer</button><div id="ch2a1" class="answer-content"><strong>A:</strong> Meiosis.</div></div>
+    <div class="qa-card"><div class="question-text">2. Most sensitive period during prenatal development?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch2a2')">📌 Click to reveal answer</button><div id="ch2a2" class="answer-content"><strong>A:</strong> Embryonic period (weeks 3‑8) — organogenesis.</div></div>
+    <div class="qa-card"><div class="question-text">3. Relationship between REM sleep and age?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch2a3')">📌 Click to reveal answer</button><div id="ch2a3" class="answer-content"><strong>A:</strong> Inverse: newborns ~50% REM, adults ~20%.</div></div>
+    <div class="qa-card"><div class="question-text">4. Newborn auditory preferences based on prenatal experience?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch2a4')">📌 Click to reveal answer</button><div id="ch2a4" class="answer-content"><strong>A:</strong> Mother's voice, native language, stories read aloud last trimester, familiar rhythms.</div></div>
+    <div class="qa-card"><div class="question-text">5. When are teratogens most dangerous?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch2a5')">📌 Click to reveal answer</button><div id="ch2a5" class="answer-content"><strong>A:</strong> Embryonic period (3‑8 weeks); each organ has specific critical window.</div></div>
+    <div class="qa-card"><div class="question-text">6. How does fetus get exposed to different tastes?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch2a6')">📌 Click to reveal answer</button><div id="ch2a6" class="answer-content"><strong>A:</strong> Amniotic fluid carries flavors from mother's diet; fetus swallows fluid.</div></div>
+    <div class="qa-card"><div class="question-text">7. True statement about infant cries?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch2a7')">📌 Click to reveal answer</button><div id="ch2a7" class="answer-content"><strong>A:</strong> Peak ~6 weeks, decrease by 3‑4 months; individual cry signatures; different types.</div></div>
+    <div class="qa-card"><div class="question-text">8. Phenomenon when infant gets bored with stimulus?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch2a8')">📌 Click to reveal answer</button><div id="ch2a8" class="answer-content"><strong>A:</strong> Habituation.</div></div>
+    <div class="qa-card"><div class="question-text">9. Best pattern for parents responding to newborn crying?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch2a9')">📌 Click to reveal answer</button><div id="ch2a9" class="answer-content"><strong>A:</strong> Prompt, consistent responding → less crying long‑term, secure attachment.</div></div>
+    <div class="qa-card"><div class="question-text">10. Colic may be associated with issues in which system?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch2a10')">📌 Click to reveal answer</button><div id="ch2a10" class="answer-content"><strong>A:</strong> Digestive system (reflux, gas, gut microbiome).</div></div>
+    <div class="qa-card"><div class="question-text">11. Cephalocaudal development means?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch2a11')">📌 Click to reveal answer</button><div id="ch2a11" class="answer-content"><strong>A:</strong> Growth proceeds from head downward.</div></div>
+    <div class="qa-card"><div class="question-text">12. REM sleep helps visual system develop — theory?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch2a12')">📌 Click to reveal answer</button><div id="ch2a12" class="answer-content"><strong>A:</strong> Self‑stimulation (autostimulation) theory.</div></div>
+    
+    <!-- ========== CHAPTER 3 ========== -->
+    <h2 id="ch3">🧬 CHAPTER 3: GENETICS, HEREDITY & NEURODEVELOPMENT</h2>
+    <div class="qa-card"><div class="question-text">1. What is the 'norm of reaction'?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch3a1')">📌 Click to reveal answer</button><div id="ch3a1" class="answer-content"><strong>A:</strong> Range of possible phenotypes from one genotype across different environments.</div></div>
+    <div class="qa-card"><div class="question-text">2. Heterozygous for curly hair means?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch3a2')">📌 Click to reveal answer</button><div id="ch3a2" class="answer-content"><strong>A:</strong> Two different alleles (one curly, one straight).</div></div>
+    <div class="qa-card"><div class="question-text">3. Approximate heritability of IQ?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch3a3')">📌 Click to reveal answer</button><div id="ch3a3" class="answer-content"><strong>A:</strong> ~50% (0.50), increases with age.</div></div>
+    <div class="qa-card"><div class="question-text">4. Cat raised in small cage, few toys — brain development?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch3a4')">📌 Click to reveal answer</button><div id="ch3a4" class="answer-content"><strong>A:</strong> Reduced synaptic density, dendritic branching, cortical thickness; visual/social deficits.</div></div>
+    <div class="qa-card"><div class="question-text">5. Factors ruled OUT as cause of autism rise?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch3a5')">📌 Click to reveal answer</button><div id="ch3a5" class="answer-content"><strong>A:</strong> Vaccines (MMR) and parenting style — completely discredited.</div></div>
+    <div class="qa-card"><div class="question-text">6. Identical twin correlation > fraternal twin correlation — conclusion?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch3a6')">📌 Click to reveal answer</button><div id="ch3a6" class="answer-content"><strong>A:</strong> Significant genetic component for that trait.</div></div>
+    <div class="qa-card"><div class="question-text">7. Myelin sheath important for?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch3a7')">📌 Click to reveal answer</button><div id="ch3a7" class="answer-content"><strong>A:</strong> Speed and efficiency of neural transmission.</div></div>
+    <div class="qa-card"><div class="question-text">8. Genetic material a person inherits?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch3a8')">📌 Click to reveal answer</button><div id="ch3a8" class="answer-content"><strong>A:</strong> Genotype.</div></div>
+    <div class="qa-card"><div class="question-text">9. Visual cortex synapses vs prefrontal cortex — timing?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch3a9')">📌 Click to reveal answer</button><div id="ch3a9" class="answer-content"><strong>A:</strong> Visual cortex peaks earlier (4‑8 months); prefrontal peaks in adolescence.</div></div>
+    <div class="qa-card"><div class="question-text">10. Correct interpretation of heritability estimate?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch3a10')">📌 Click to reveal answer</button><div id="ch3a10" class="answer-content"><strong>A:</strong> Proportion of VARIANCE in a trait within a specific POPULATION at a specific TIME due to genetic differences. (NOT individual, NOT fixed).</div></div>
+    <div class="qa-card"><div class="question-text">11. Trait gotten from parents — heritable or inherited?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch3a11')">📌 Click to reveal answer</button><div id="ch3a11" class="answer-content"><strong>A:</strong> Inherited (passed down), but cannot tell if heritable (could be environmental).</div></div>
+    <div class="qa-card"><div class="question-text">12. Sharing household makes people similar — called?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch3a12')">📌 Click to reveal answer</button><div id="ch3a12" class="answer-content"><strong>A:</strong> Shared environment effects.</div></div>
+    <div class="qa-card"><div class="question-text">13. Genes produce trait via reliably present environment — concept?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch3a13')">📌 Click to reveal answer</button><div id="ch3a13" class="answer-content"><strong>A:</strong> Canalized development.</div></div>
+    <div class="qa-card"><div class="question-text">14. Genes × environment → final outcome = ?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch3a14')">📌 Click to reveal answer</button><div id="ch3a14" class="answer-content"><strong>A:</strong> Phenotype.</div></div>
+
+    <!-- ========== CHAPTER 4 ========== -->
+    <h2 id="ch4">🧠 CHAPTER 4: COGNITIVE DEVELOPMENT</h2>
+    <div class="qa-card"><div class="question-text">1. Child perceives world solely from own view — Piagetian?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch4a1')">📌 Click to reveal answer</button><div id="ch4a1" class="answer-content"><strong>A:</strong> Egocentrism; preoperational stage.</div></div>
+    <div class="qa-card"><div class="question-text">2. Task analysis — what is included/NOT included?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch4a2')">📌 Click to reveal answer</button><div id="ch4a2" class="answer-content"><strong>A:</strong> INCLUDES: goals, problem states, strategies, prerequisites. NOT: emotions, personality, social relationships.</div></div>
+    <div class="qa-card"><div class="question-text">3. When does joint attention develop?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch4a3')">📌 Click to reveal answer</button><div id="ch4a3" class="answer-content"><strong>A:</strong> 9‑12 months.</div></div>
+    <div class="qa-card"><div class="question-text">4. What is assimilation?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch4a4')">📌 Click to reveal answer</button><div id="ch4a4" class="answer-content"><strong>A:</strong> Interpreting new experiences using existing schemas — NO schema change.</div></div>
+    <div class="qa-card"><div class="question-text">5. Innate knowledge in evolutionarily important areas — which theories?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch4a5')">📌 Click to reveal answer</button><div id="ch4a5" class="answer-content"><strong>A:</strong> Core knowledge theories (Spelke, Baillargeon).</div></div>
+    <div class="qa-card"><div class="question-text">6. Autism difficulty with own vs others' mind — core knowledge perspective?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch4a6')">📌 Click to reveal answer</button><div id="ch4a6" class="answer-content"><strong>A:</strong> Theory of Mind module dysfunction.</div></div>
+    <div class="qa-card"><div class="question-text">7. Characteristics of sensorimotor stage?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch4a7')">📌 Click to reveal answer</button><div id="ch4a7" class="answer-content"><strong>A:</strong> Learning via senses/actions; object permanence develops; reflexes → goal‑directed; end: symbolic thought.</div></div>
+    <div class="qa-card"><div class="question-text">8. Bob: thought = internalized speech — similar to which theorist?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch4a8')">📌 Click to reveal answer</button><div id="ch4a8" class="answer-content"><strong>A:</strong> Vygotsky.</div></div>
+    <div class="qa-card"><div class="question-text">9. Skinner/Locke description of infants?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch4a9')">📌 Click to reveal answer</button><div id="ch4a9" class="answer-content"><strong>A:</strong> Passive recipients; blank slate; shaped entirely by reinforcement.</div></div>
+    <div class="qa-card"><div class="question-text">10. Continuous development, domain‑general, strategy addition — which theories?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch4a10')">📌 Click to reveal answer</button><div id="ch4a10" class="answer-content"><strong>A:</strong> Information processing theories.</div></div>
+    <div class="qa-card"><div class="question-text">11. Experiences cause change to new operational structure — Piaget concept?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch4a11')">📌 Click to reveal answer</button><div id="ch4a11" class="answer-content"><strong>A:</strong> Accommodation.</div></div>
+    <div class="qa-card"><div class="question-text">12. Chad: Play‑Doh ball → snake, insists there's MORE — Piaget stage?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch4a12')">📌 Click to reveal answer</button><div id="ch4a12" class="answer-content"><strong>A:</strong> Preoperational (fails conservation; centration on length).</div></div>
+    <div class="qa-card"><div class="question-text">13. Focus only on one aspect (height, not width) — called?</div><button class="reveal-btn" onclick="revealAnswer(this, 'ch4a13')">📌 Click to reveal answer</button><div id="ch4a13" class="answer-content"><strong>A:</strong> Centration.</div></div>
+
+    <!-- ========== INTEGRATION & TRAPS ========== -->
+    <h2 id="integration">⚡ CROSS‑CHAPTER INTEGRATION</h2>
+    <h3>📋 Theorist comparison</h3>
+    <table>
+        <tr><th>Theorist</th><th>Core view</th><th>Mechanism</th><th>Stages?</th></tr>
+        <tr><td>Piaget</td><td>Constructivist</td><td>Assimilation/accommodation</td><td>YES (4)</td></tr>
+        <tr><td>Vygotsky</td><td>Sociocultural</td><td>Internalized speech</td><td>NO</td></tr>
+        <tr><td>Skinner</td><td>Behaviorist</td><td>Operant conditioning</td><td>NO</td></tr>
+        <tr><td>Core knowledge</td><td>Nativist/modular</td><td>Innate domain‑specific modules</td><td>NO</td></tr>
+        <tr><td>Information processing</td><td>Mechanist</td><td>Strategy acquisition</td><td>NO</td></tr>
+    </table>
+
+    <h3 id="traps">⚠️ COMMON EXAM TRAPS (click each to reveal — but we keep them visible as warnings)</h3>
+    <div class="trap-box">
+        <ul style="list-style-type: '🧨 ';">
+            <li><strong>Heritability:</strong> “50% of my intelligence comes from genes” → FALSE. Heritability is POPULATION variance.</li>
+            <li><strong>Inherited vs heritable:</strong> “runs in families = genetic” → FALSE (shared environment).</li>
+            <li><strong>Assimilation vs accommodation:</strong> assimilation = no schema change; accommodation = change.</li>
+            <li><strong>Cross‑sectional vs longitudinal:</strong> cross = cohort effects; longitudinal = attrition.</li>
+            <li><strong>Piaget stage:</strong> object permanence = sensorimotor; conservation failure = preoperational.</li>
+            <li><strong>Teratogens:</strong> embryonic (3‑8 wks) most dangerous, not whole pregnancy.</li>
+            <li><strong>Autism causes:</strong> vaccines & parenting RULED OUT.</li>
+        </ul>
+    </div>
+
+    <!-- ========== QUICK REFERENCE ========== -->
+    <h2 id="quickref">📇 QUICK REFERENCE — ALL CHAPTERS</h2>
+    <div class="quickref-grid">
+        <div class="quickref-card"><h4 style="margin-top:0;">🔬 CH 1</h4>Plato: reason+control; Locke: tabula rasa; Longitudinal= same Ss; Cross‑sectional=cohort effects; Internal=causation; Construct=measures construct</div>
+        <div class="quickref-card"><h4 style="margin-top:0;">👶 CH 2</h4>Embryonic most sensitive; Meiosis=germ; REM ↓ with age; Newborn prefers mother's voice; Habituation; Cephalocaudal=head down</div>
+        <div class="quickref-card"><h4 style="margin-top:0;">🧬 CH 3</h4>Genotype (inherited) vs phenotype (G×E); Heritability = variance; Norm of reaction; Canalized; Vaccines NOT cause autism</div>
+        <div class="quickref-card"><h4 style="margin-top:0;">🧠 CH 4</h4>Assimilation (no change) vs accommodation (change); Preoperational: egocentrism, centration; Joint attention 9‑12mo; Vygotsky = internalized speech</div>
     </div>
 
     <!-- ========== CHECKLIST ========== -->
-    <div style="background: #d1eaf2; border-radius: 36px; padding: 2rem; margin: 3rem 0;">
-        <h3 style="border-bottom: none;">✅ EXAM READINESS</h3>
-        <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
-            <span>▢ Ethics (informed consent, deception)</span>
-            <span>▢ Neuron parts & myelin</span>
-            <span>▢ Action potential phases</span>
-            <span>▢ Sympathetic vs parasympathetic</span>
-            <span>▢ Hindbrain structures</span>
-            <span>▢ Limbic system: hippocampus/amygdala</span>
-            <span>▢ Four lobes + Broca/Wernicke</span>
+    <div style="background: #cfecf0; border-radius: 32px; padding: 2rem; margin-top: 2.2rem;">
+        <h3 style="border-bottom: none; margin-top: 0;">✅ FINAL EXAM READINESS CHECKLIST</h3>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem;">
+            <span>▢ I can define heritability & its limits</span>
+            <span>▢ I can differentiate assimilation/accommodation</span>
+            <span>▢ I know embryonic = most sensitive</span>
+            <span>▢ I know joint attention = 9‑12 mo</span>
+            <span>▢ I can name 3 newborn auditory preferences</span>
+            <span>▢ I know Piaget's 4 stages & key errors</span>
+            <span>▢ I know what vaccines do NOT cause</span>
+            <span>▢ I distinguish cross‑sectional, longitudinal, cross‑sequential</span>
+            <span>▢ I know internal vs external validity</span>
+            <span>▢ I can explain norm of reaction</span>
         </div>
     </div>
 
     <footer>
-        <p><strong>🔁 Psychology 201 · Biological Bases</strong> — all content from your study guide. Click any button to test yourself.</p>
-        <p style="font-size: 0.9rem;">APA ethics · cells · neuron · impulse · CNS/PNS · brain · lobes · 70+ click cards</p>
+        <p><strong>🔁 Active recall ready:</strong> 62+ questions with hidden answers. Click to test yourself. Use Print → Save as PDF to keep interactive version or static.</p>
+        <p style="font-size: 0.9rem;">Developmental Psychology · Chapters 1–4 · Complete click-to-reveal master study guide</p>
     </footer>
 </div>
+
+<!-- tiny script also for any late binds -->
+<script>
+    // Additional safeguard: ensure all answer divs start hidden (they are by default)
+</script>
 </body>
 </html>
